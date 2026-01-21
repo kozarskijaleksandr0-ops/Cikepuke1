@@ -1,4 +1,4 @@
-﻿namespace Domain.LocationsContext.ValueObjects
+﻿namespace DirectoryService.Domain.Shared
 {
     public sealed record EntityLifeTime
     {

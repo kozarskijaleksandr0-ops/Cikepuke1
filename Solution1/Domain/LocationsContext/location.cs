@@ -1,4 +1,5 @@
-﻿using Domain.LocationsContext.ValueObjects;
+﻿using DirectoryService.Domain.Shared;
+using Domain.LocationsContext.ValueObjects;
 
 namespace Domain.Location
 {
