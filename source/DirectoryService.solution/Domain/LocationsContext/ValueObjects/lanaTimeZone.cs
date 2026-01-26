@@ -4,16 +4,16 @@ using System.Text;
 
 namespace Domain.LocationsContext.ValueObjects
 {
-    public sealed class lanaTimeZone
+    public sealed class IanaTimeZone
     {
         public string Value { get; }
 
-        private lanaTimeZone(string value)
+        private IanaTimeZone(string value)
         {
             Value = value;
         }
 
-        public static lanaTimeZone Create(string value)
+        public static IanaTimeZone Create(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
                 throw new ArgumentException("IANA временная зона не может быть пустой.", nameof(value));
@@ -40,7 +40,7 @@ namespace Domain.LocationsContext.ValueObjects
                         nameof(value));
             }
 
-            return new lanaTimeZone(value);
+            return new IanaTimeZone(value);
         }
     }
 }

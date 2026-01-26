@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Domain.LocationsContext.ValueObjects
+namespace Domain.Position.ValueObjects
 {
-    internal class EntityLifeTime
+    public class EntityLifeTime
     {
         public DateTime CreatedAt { get; }
         public DateTime UpdatedAt { get; }
@@ -37,8 +37,5 @@ namespace Domain.LocationsContext.ValueObjects
             return new EntityLifeTime(createdAt, updatedAt, isActivate);
         }
     }
-
 }
-
-    
 
