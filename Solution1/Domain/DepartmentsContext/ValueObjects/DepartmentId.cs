@@ -17,5 +17,13 @@ namespace DirectoryService.Domain.DepartmentsContext.ValueObjects
 
             return new DepartmentId(value);
         }
+
+        public static DepartmentId? CreateNullable(Guid? value)
+        {
+            if (value == null || value == Guid.Empty)
+                return null;
+
+            return Create(value.Value);
+        }
     }
 }

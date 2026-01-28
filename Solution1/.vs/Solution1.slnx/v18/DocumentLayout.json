@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3053FCD5-B141-4281-850F-6A479D59790C}|ConsoleApp2\\ConsoleApp2.csproj|e:\\\u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\solution1\\consoleapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3053FCD5-B141-4281-850F-6A479D59790C}|ConsoleApp2\\ConsoleApp2.csproj|solutionrelative:consoleapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\solution1\\domain\\departmentscontext\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\departmentscontext\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\solution1\\domain\\departmentscontext\\valueobjects\\departmentpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\departmentscontext\\valueobjects\\departmentpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\solution1\\domain\\departmentscontext\\valueobjects\\departmentidentifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\departmentscontext\\valueobjects\\departmentidentifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\solution1\\domain\\position\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,10 +31,6 @@
       "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\position\\valueobjects\\positiondescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\solution1\\domain\\departmentscontext\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\departmentscontext\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\solution1\\domain\\departmentscontext\\valueobjects\\departmentname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\departmentscontext\\valueobjects\\departmentname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -41,14 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\solution1\\domain\\shared\\entitylifetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\shared\\entitylifetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\solution1\\domain\\departmentscontext\\valueobjects\\departmentidentifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\departmentscontext\\valueobjects\\departmentidentifier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\solution1\\domain\\departmentscontext\\valueobjects\\departmentpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\departmentscontext\\valueobjects\\departmentpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,72 +58,92 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PositionDescription.cs",
-              "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Position\\ValueObjects\\PositionDescription.cs",
-              "RelativeDocumentMoniker": "Domain\\Position\\ValueObjects\\PositionDescription.cs",
-              "ToolTip": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Position\\ValueObjects\\PositionDescription.cs*",
-              "RelativeToolTip": "Domain\\Position\\ValueObjects\\PositionDescription.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "PositionName.cs",
+              "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Position\\ValueObjects\\PositionName.cs",
+              "RelativeDocumentMoniker": "Domain\\Position\\ValueObjects\\PositionName.cs",
+              "ToolTip": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Position\\ValueObjects\\PositionName.cs",
+              "RelativeToolTip": "Domain\\Position\\ValueObjects\\PositionName.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T03:59:49.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-21T03:59:22.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PositionId.cs",
+              "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Position\\ValueObjects\\PositionId.cs",
+              "RelativeDocumentMoniker": "Domain\\Position\\ValueObjects\\PositionId.cs",
+              "ToolTip": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Position\\ValueObjects\\PositionId.cs",
+              "RelativeToolTip": "Domain\\Position\\ValueObjects\\PositionId.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T03:58:58.837Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PositionName.cs",
-              "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Position\\ValueObjects\\PositionName.cs",
-              "RelativeDocumentMoniker": "Domain\\Position\\ValueObjects\\PositionName.cs",
-              "ToolTip": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Position\\ValueObjects\\PositionName.cs*",
-              "RelativeToolTip": "Domain\\Position\\ValueObjects\\PositionName.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
+              "Title": "Position.cs",
+              "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Position\\Position.cs",
+              "RelativeDocumentMoniker": "Domain\\Position\\Position.cs",
+              "ToolTip": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Position\\Position.cs",
+              "RelativeToolTip": "Domain\\Position\\Position.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T03:59:22.697Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PositionId.cs",
-              "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Position\\ValueObjects\\PositionId.cs",
-              "RelativeDocumentMoniker": "Domain\\Position\\ValueObjects\\PositionId.cs",
-              "ToolTip": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Position\\ValueObjects\\PositionId.cs*",
-              "RelativeToolTip": "Domain\\Position\\ValueObjects\\PositionId.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T03:58:58.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-21T03:19:30.942Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\ConsoleApp2\\Program.cs",
-              "RelativeDocumentMoniker": "ConsoleApp2\\Program.cs",
-              "ToolTip": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\ConsoleApp2\\Program.cs*",
-              "RelativeToolTip": "ConsoleApp2\\Program.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEBAAAUAAAAAAAAAA==",
+              "Title": "Department.cs",
+              "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\DepartmentsContext\\Department.cs",
+              "RelativeDocumentMoniker": "Domain\\DepartmentsContext\\Department.cs",
+              "ToolTip": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\DepartmentsContext\\Department.cs",
+              "RelativeToolTip": "Domain\\DepartmentsContext\\Department.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAUwBEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T03:30:02.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EntityLifeTime.cs",
-              "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Shared\\EntityLifeTime.cs",
-              "RelativeDocumentMoniker": "Domain\\Shared\\EntityLifeTime.cs",
-              "ToolTip": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Shared\\EntityLifeTime.cs",
-              "RelativeToolTip": "Domain\\Shared\\EntityLifeTime.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T03:14:44.555Z",
+              "WhenOpened": "2026-01-21T02:55:06.485Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "PositionDescription.cs",
+              "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Position\\ValueObjects\\PositionDescription.cs",
+              "RelativeDocumentMoniker": "Domain\\Position\\ValueObjects\\PositionDescription.cs",
+              "ToolTip": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Position\\ValueObjects\\PositionDescription.cs",
+              "RelativeToolTip": "Domain\\Position\\ValueObjects\\PositionDescription.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T03:59:49.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DepartmentIdentifier.cs",
+              "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentIdentifier.cs",
+              "RelativeDocumentMoniker": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentIdentifier.cs",
+              "ToolTip": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentIdentifier.cs",
+              "RelativeToolTip": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentIdentifier.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T02:57:46.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DepartmentPath.cs",
+              "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentPath.cs",
+              "RelativeDocumentMoniker": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentPath.cs",
+              "ToolTip": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentPath.cs",
+              "RelativeToolTip": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentPath.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T02:58:20.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "DepartmentName.cs",
               "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentName.cs",
               "RelativeDocumentMoniker": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentName.cs",
@@ -135,38 +151,23 @@
               "RelativeToolTip": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentName.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T02:57:12.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Position.cs",
-              "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Position\\Position.cs",
-              "RelativeDocumentMoniker": "Domain\\Position\\Position.cs",
-              "ToolTip": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Position\\Position.cs*",
-              "RelativeToolTip": "Domain\\Position\\Position.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T03:19:30.942Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-21T02:57:12.711Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "DepartmentIdentifier.cs",
-              "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentIdentifier.cs",
-              "RelativeDocumentMoniker": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentIdentifier.cs",
-              "ToolTip": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentIdentifier.cs",
-              "RelativeToolTip": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentIdentifier.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
+              "Title": "EntityLifeTime.cs",
+              "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Shared\\EntityLifeTime.cs",
+              "RelativeDocumentMoniker": "Domain\\Shared\\EntityLifeTime.cs",
+              "ToolTip": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\Shared\\EntityLifeTime.cs",
+              "RelativeToolTip": "Domain\\Shared\\EntityLifeTime.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T02:57:46.989Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-21T03:14:44.555Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "DepartmentId.cs",
               "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentId.cs",
               "RelativeDocumentMoniker": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentId.cs",
@@ -174,25 +175,11 @@
               "RelativeToolTip": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentId.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T02:56:28.444Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-21T02:56:28.444Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Department.cs",
-              "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\DepartmentsContext\\Department.cs",
-              "RelativeDocumentMoniker": "Domain\\DepartmentsContext\\Department.cs",
-              "ToolTip": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\DepartmentsContext\\Department.cs",
-              "RelativeToolTip": "Domain\\DepartmentsContext\\Department.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA5wBEAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T02:55:06.485Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "location.cs",
               "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\LocationsContext\\location.cs",
               "RelativeDocumentMoniker": "Domain\\LocationsContext\\location.cs",
@@ -200,21 +187,7 @@
               "RelativeToolTip": "Domain\\LocationsContext\\location.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T03:01:48.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DepartmentPath.cs",
-              "DocumentMoniker": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentPath.cs",
-              "RelativeDocumentMoniker": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentPath.cs",
-              "ToolTip": "E:\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u044B\u0445 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentPath.cs",
-              "RelativeToolTip": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentPath.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T02:58:20.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-21T03:01:48.548Z"
             }
           ]
         }

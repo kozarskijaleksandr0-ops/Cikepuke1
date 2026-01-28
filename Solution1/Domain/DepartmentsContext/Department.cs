@@ -10,33 +10,71 @@ namespace DirectoryService.Domain.DepartmentsContext
         public DepartmentIdentifier Identifier { get; }
         public DepartmentId? ParentId { get; }
         public DepartmentPath Path { get; }
+        public DepartmentDepth Depth { get; }
         public bool IsActive { get; }
         public EntityLifeTime LifeTime { get; }
 
-        // Конструктор для корневого подразделения
-        public Department(
-            DepartmentId id,
+        // Фабричный метод для создания корневого подразделения
+        public static Department CreateRoot(
             DepartmentName name,
             DepartmentIdentifier identifier,
-            bool isActive,
-            EntityLifeTime lifeTime)
+            bool isActive = true)
         {
-            Id = id;
-            Name = name;
-            Identifier = identifier;
-            ParentId = null;
-            Path = DepartmentPath.CreateForRoot(identifier.Value);
-            IsActive = isActive;
-            LifeTime = lifeTime;
+            var id = DepartmentId.Create();
+            var path = DepartmentPath.CreateForRoot(identifier.Value);
+            var depth = DepartmentDepth.CalculateFromPath(path);
+            var lifeTime = EntityLifeTime.Create(
+                createdAt: DateTime.UtcNow,
+                updatedAt: DateTime.UtcNow
+            );
+
+            return new Department(
+                id,
+                name,
+                identifier,
+                null,
+                path,
+                depth,
+                isActive,
+                lifeTime
+            );
         }
 
-        // Конструктор для дочернего подразделения
-        public Department(
+        // Фабричный метод для создания дочернего подразделения
+        public static Department CreateChild(
+            DepartmentName name,
+            DepartmentIdentifier identifier,
+            Department parent,
+            bool isActive = true)
+        {
+            var id = DepartmentId.Create();
+            var path = DepartmentPath.CreateForChild(parent.Path, identifier.Value);
+            var depth = parent.Depth.Increment();
+            var lifeTime = EntityLifeTime.Create(
+                createdAt: DateTime.UtcNow,
+                updatedAt: DateTime.UtcNow
+            );
+
+            return new Department(
+                id,
+                name,
+                identifier,
+                parent.Id,
+                path,
+                depth,
+                isActive,
+                lifeTime
+            );
+        }
+
+        // Закрытый конструктор
+        private Department(
             DepartmentId id,
             DepartmentName name,
             DepartmentIdentifier identifier,
-            DepartmentId parentId,
-            DepartmentPath parentPath,
+            DepartmentId? parentId,
+            DepartmentPath path,
+            DepartmentDepth depth,
             bool isActive,
             EntityLifeTime lifeTime)
         {
@@ -44,38 +82,41 @@ namespace DirectoryService.Domain.DepartmentsContext
             Name = name;
             Identifier = identifier;
             ParentId = parentId;
-            Path = DepartmentPath.CreateForChild(parentPath.Value, identifier.Value);
+            Path = path;
+            Depth = depth;
             IsActive = isActive;
             LifeTime = lifeTime;
         }
 
-        // Метод для создания дочернего подразделения
-        public Department CreateChild(
-            DepartmentName childName,
-            DepartmentIdentifier childIdentifier,
-            bool isActive = true)
+        // Метод для изменения активности
+        public Department ChangeActivity(bool isActive)
         {
+            var updatedLifeTime = EntityLifeTime.Create(
+                createdAt: LifeTime.CreatedAt,
+                updatedAt: DateTime.UtcNow,
+                isActive: isActive
+            );
+
             return new Department(
-                id: DepartmentId.Create(),
-                name: childName,
-                identifier: childIdentifier,
-                parentId: Id,
-                parentPath: Path,
-                isActive: isActive,
-                lifeTime: EntityLifeTime.Create(
-                    createdAt: DateTime.UtcNow,
-                    updatedAt: DateTime.UtcNow
-                )
+                Id,
+                Name,
+                Identifier,
+                ParentId,
+                Path,
+                Depth,
+                isActive,
+                updatedLifeTime
             );
         }
 
-        // Метод для деактивации подразделения
-        public Department Deactivate()
+        // Метод для проверки, является ли подразделение корневым
+        public bool IsRoot() => ParentId == null;
+
+        // Метод для проверки, является ли подразделение дочерним относительно другого
+        public bool IsChildOf(Department parent)
         {
-            // В реальном проекте здесь была бы логика создания нового объекта
-            // с обновленным состоянием, так как объекты иммутабельны
-            // Для простоты оставим как есть
-            return this;
+            if (parent == null) return false;
+            return Path.Value.StartsWith(parent.Path.Value + ".");
         }
     }
 }

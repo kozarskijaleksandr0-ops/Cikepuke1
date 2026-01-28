@@ -5,41 +5,52 @@ namespace DirectoryService.Domain.DepartmentsContext.ValueObjects
 {
     public sealed record DepartmentPath
     {
-        public string Value { get; }
-        public int Depth { get; }
+        public const int MaxLength = 500;
 
-        private DepartmentPath(string value, int depth)
+        public string Value { get; }
+
+        private DepartmentPath(string value)
         {
             Value = value;
-            Depth = depth;
+        }
+
+        public static DepartmentPath Create(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                throw new ArgumentException("Путь подразделения не может быть пустым.", nameof(value));
+
+            if (value.Length > MaxLength)
+                throw new ArgumentException($"Путь подразделения не может превышать {MaxLength} символов.", nameof(value));
+
+            // Проверяем формат пути (должен состоять из идентификаторов, разделенных точками)
+            var parts = value.Split('.');
+            foreach (var part in parts)
+            {
+                if (string.IsNullOrWhiteSpace(part))
+                    throw new ArgumentException("Путь подразделения содержит пустые части.", nameof(value));
+            }
+
+            return new DepartmentPath(value);
         }
 
         public static DepartmentPath CreateForRoot(string identifier)
         {
-            if (string.IsNullOrWhiteSpace(identifier))
-                throw new ArgumentException("Идентификатор не может быть пустым.", nameof(identifier));
-
-            return new DepartmentPath(identifier, 0);
+            return Create(identifier);
         }
 
-        public static DepartmentPath CreateForChild(string parentPath, string childIdentifier)
+        public static DepartmentPath CreateForChild(DepartmentPath parentPath, string childIdentifier)
         {
-            if (string.IsNullOrWhiteSpace(parentPath))
-                throw new ArgumentException("Путь родителя не может быть пустым.", nameof(parentPath));
+            var newPath = $"{parentPath.Value}.{childIdentifier}";
+            return Create(newPath);
+        }
 
-            if (string.IsNullOrWhiteSpace(childIdentifier))
-                throw new ArgumentException("Идентификатор ребенка не может быть пустым.", nameof(childIdentifier));
-
-            var newPath = $"{parentPath}.{childIdentifier}";
-            var depth = newPath.Count(c => c == '.'); // Подсчет точек для определения глубины
-
-            return new DepartmentPath(newPath, depth);
+        public short CalculateDepth()
+        {
+            return (short)Value.Count(c => c == '.');
         }
 
         public string GetParentPath()
         {
-            if (Depth == 0) return string.Empty;
-
             var lastDotIndex = Value.LastIndexOf('.');
             return lastDotIndex > 0 ? Value.Substring(0, lastDotIndex) : string.Empty;
         }
