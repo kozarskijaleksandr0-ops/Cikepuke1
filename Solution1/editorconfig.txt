@@ -6,608 +6,567 @@ tab_width = 4
 max_line_length = 120
 use_tabs = false
 
-dotnet_diagnostic.CA1016.severity = none # Не требовать наличие атрибута AssemblyVersion
-dotnet_diagnostic.CA2007.severity = none # Не требовать использования ConfigureAwait при await
-dotnet_diagnostic.CA1031.severity = none # Разрешить пустой catch без обработки исключения
-dotnet_diagnostic.CA1034.severity = none # extension members fix
-dotnet_diagnostic.CA1056.severity = none # Разрешить использование строк для URI
-dotnet_diagnostic.CA1711.severity = none # Не требовать суффиксы для имен типов (например, Collection)
-dotnet_diagnostic.CA1819.severity = error # Не использовать массивы в публичных свойствах (только IReadOnlyCollection)
-dotnet_diagnostic.CA1812.severity = none # Не требовать использования неиспользуемых типов
-dotnet_diagnostic.CA1054.severity = none # Разрешить string параметры для URI
-dotnet_diagnostic.CA1515.severity = none # Не требовать xml-комментарии для свойств
-dotnet_diagnostic.CA1724.severity = none # Разрешить совпадение имен типов с пространствами имён
-dotnet_diagnostic.CA1707.severity = none # Разрешить подчеркивания в именах
-dotnet_diagnostic.CA1040.severity = none # Разрешить пустые интерфейсы
-dotnet_diagnostic.CA1008.severity = error # Запретить enum без 0 значения
-dotnet_diagnostic.CA1012.severity = error # Запретить конструкторы в абстрактных типах
-dotnet_diagnostic.CA1019.severity = error # Атрибуты должны иметь аксессоры get и set
-dotnet_diagnostic.CA1044.severity = error # Свойства должны иметь чтение
-dotnet_diagnostic.CA1047.severity = error # Не должно быть protected в sealed классах
-dotnet_diagnostic.CA1061.severity = error # Не прятать методы базового класса
-dotnet_diagnostic.CA1064.severity = error # Исключения должны быть public
-dotnet_diagnostic.CA1037.severity = error
-dotnet_diagnostic.CA1507.severity = error
-dotnet_diagnostic.CA1508.severity = error
-dotnet_diagnostic.CA1721.severity = error
-dotnet_diagnostic.CA1724.severity = error
-dotnet_diagnostic.CA1725.severity = error
-dotnet_diagnostic.CA1805.severity = error
-dotnet_diagnostic.CS1591.severity = error
-dotnet_diagnostic.CA1823.severity = error
-dotnet_diagnostic.CA1829.severity = error
-dotnet_diagnostic.CA1831.severity = error
-dotnet_diagnostic.CA1832.severity = error
-dotnet_diagnostic.CA1833.severity = error
-dotnet_diagnostic.CA1834.severity = error
-dotnet_diagnostic.CA1835.severity = error
-dotnet_diagnostic.CA1842.severity = error
-dotnet_diagnostic.CA1843.severity = error
-dotnet_diagnostic.CA1846.severity = error
-dotnet_diagnostic.CA1860.severity = error
-dotnet_diagnostic.CA1865.severity = error
-dotnet_diagnostic.CA1867.severity = error
-dotnet_diagnostic.CA1874.severity = error
-dotnet_diagnostic.CA1875.severity = error
-dotnet_diagnostic.CA2025.severity = error
-dotnet_diagnostic.CA2227.severity = error
-dotnet_diagnostic.CA2245.severity = error
-dotnet_diagnostic.CA1000.severity = none # Разрешить статические члены в нестатических классах
-dotnet_diagnostic.CA1715.severity = none # Не требовать суффиксы для generic-параметров
-dotnet_diagnostic.CA1716.severity = none # Разрешить совпадение имен с ключевыми словами
-dotnet_diagnostic.CA1720.severity = none # Разрешить неудачные имена переменных (например, value)
-dotnet_diagnostic.CA2225.severity = none # Не требовать перегрузку операторов для свойств
-dotnet_diagnostic.CA5401.severity = none # Не требовать безопасного использования SecureString
-dotnet_diagnostic.CA1816.severity = error # Требовать вызов Dispose для IDisposable
-dotnet_diagnostic.CA2201.severity = none # Разрешить выбрасывать Exception напрямую
-dotnet_diagnostic.CA1305.severity = none # Не требовать явную культуру для методов форматирования
-dotnet_diagnostic.CA1032.severity = none # Не требовать конструкторы для исключений
-dotnet_diagnostic.CA2213.severity = none # Не требовать вызов Dispose для полей типа IDisposable
-dotnet_diagnostic.CS8600.severity = none # Не предупреждать о приведении nullable типов
-dotnet_diagnostic.CS9003.severity = none # Для строк """ """ 
-dotnet_diagnostic.RCS1194.severity = none # Реализация исключений
-dotnet_diagnostic.RCS1129.severity = error # Неиспользуемый параметр метода
-dotnet_diagnostic.CA1721.severity = none # Разрешить совпадение имен с типами BCL
-dotnet_diagnostic.CS8714.severity = none # Не предупреждать о generic-ограничениях с nullable
-dotnet_diagnostic.CS8795.severity = none # Не предупреждать о nullability в partial классах
-dotnet_diagnostic.CA2211.severity = none # Разрешить публичные статические поля
-dotnet_diagnostic.CA5394.severity = none # Не требовать безопасного использования Random
-dotnet_diagnostic.NETSDK1206.severity = none # Не предупреждать о несовместимости SDK
-dotnet_style_require_local_variable_type = true:suggestion # Требовать явное указание типа для локальных переменных
-csharp_style_var_for_built_in_types = false:error # Не использовать var для встроенных типов (int, string)
-csharp_style_var_when_type_is_apparent = false:error # Не использовать var, даже если тип очевиден
-csharp_style_var_elsewhere = false:error # Не использовать var в остальных случаях
-dotnet_style_require_accessibility_modifiers = always:error # Всегда требовать модификаторы доступа (public/private и т.д.)
-csharp_prefer_braces = always:error # Всегда использовать фигурные скобки для if/for/while и т.д.
-trim_trailing_whitespace = true # Удалять пробелы в конце строк
-insert_final_newline = true # Добавлять пустую строку в конце файла
-dotnet_separate_import_directive_groups = true:suggestion # Группировать using-директивы по смыслу
-dotnet_sort_system_directives_first = true:error # Сначала using System, затем остальные
-
-csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion # Предпочитать pattern matching вместо is + cast
-csharp_style_expression_bodied_methods = true:suggestion # Предпочитать методы с выражением-результатом (=>)
-csharp_style_expression_bodied_properties = true:suggestion # Предпочитать свойства с выражением-результатом (=>)
-
-dotnet_naming_rule.classes_should_be_pascal_case.severity = error # Классы должны быть в PascalCase
-dotnet_naming_rule.local_variables_should_be_camel_case.severity = error # Локальные переменные должны быть в camelCase
-
-dotnet_style_require_accessibility_modifiers = always:error
-
-# Строгие правила для async/await
-dotnet_diagnostic.VSTHRD200.severity = error # Не блокировать асинхронный код
-dotnet_diagnostic.CA2012.severity = error # Не использовать ValueTask напрямую
-
-# Обязательное использование IReadOnlyCollection/IReadOnlyList для публичных коллекций
-dotnet_diagnostic.CA1002.severity = warning
-
-# Обязательное использование CancellationToken в асинхронных методах
-dotnet_diagnostic.CA2016.severity = error
-
-# Безопасность и минимизация аллокаций
-dotnet_diagnostic.CA2000.severity = none   # Не забывать освобождать IDisposable
-dotnet_diagnostic.IDISP001.severity = error # (анализатор IDisposable)
-dotnet_diagnostic.CA1814.severity = error # Использовать массивы вместо List<T> там, где возможно
-dotnet_diagnostic.CA1708.severity = none
-dotnet_diagnostic.CA1835.severity = error # Использовать MemoryExtensions для Span/Memory
-dotnet_diagnostic.CA1836.severity = error # Использовать SequenceEqual для сравнения коллекций
-dotnet_diagnostic.CA1845.severity = error # Использовать коллекции без аллокаций (например, ValueList)
-dotnet_diagnostic.CA1846.severity = error # Использовать AsSpan/AsMemory для строк
-dotnet_diagnostic.CA1850.severity = error # Использовать TryGetNonEnumeratedCount для коллекций
-dotnet_diagnostic.CA1852.severity = error # Использовать sealed для классов без наследования
-dotnet_diagnostic.CA1854.severity = error # Не хранить неиспользуемые поля
-dotnet_diagnostic.CA1861.severity = error # Использовать stackalloc для небольших массивов
-dotnet_diagnostic.CA1859.severity = error # Использовать pattern matching вместо is/as
-dotnet_diagnostic.CA1508.severity = error # Избыточная проверка на null или условие всегда истинно/ложно
-dotnet_diagnostic.CS0168.severity = error # Переменная объявлена, но не используется
-dotnet_diagnostic.CS0219.severity = error # Переменная присвоена, но не используется
-dotnet_diagnostic.CA1804.severity = error # Неиспользуемое локальное переменное значение
-dotnet_diagnostic.CA1823.severity = error # Неиспользуемое приватное поле
-dotnet_diagnostic.CA1822.severity = error # Метод не использует instance-члены, можно сделать static
-dotnet_diagnostic.CS8602.severity = error # Возможное обращение к объекту, равному null (NullReferenceException)
-dotnet_diagnostic.CS8604.severity = none # fix null
-dotnet_diagnostic.CS8618.severity = error # Неинициализированное не-nullable свойство/поле
-dotnet_diagnostic.CS4014.severity = error # Неожиданно неожидаемый await для асинхронного вызова
-dotnet_diagnostic.CA1308.severity = error # Не использовать ToLower(), использовать ToLowerInvariant()
-dotnet_diagnostic.CA1309.severity = error # Использовать StringComparison при сравнении строк
-dotnet_diagnostic.CA1065.severity = error # Не выбрасывать NotImplementedException/NotSupportedException в конструкторах
-dotnet_diagnostic.CA1062.severity = none # Не требовать проверку аргументов на null
-
-# Microsoft .NET properties
-csharp_new_line_before_members_in_object_initializers = false # Не добавлять новую строку перед членами в инициализаторах объектов
-csharp_preferred_modifier_order = public, private, protected, internal, file, new, static, abstract, virtual, sealed, readonly, override, extern, unsafe, volatile, async, required:suggestion # Предпочтительный порядок модификаторов
-csharp_style_prefer_utf8_string_literals = true:suggestion # Предпочитать литералы строк в формате UTF-8
-csharp_style_var_elsewhere = true:suggestion # Предпочитать var в остальных случаях
-csharp_style_var_for_built_in_types = true:suggestion # Предпочитать var для встроенных типов
-csharp_style_var_when_type_is_apparent = true:suggestion # Предпочитать var, если тип очевиден
-dotnet_style_parentheses_in_arithmetic_binary_operators = never_if_unnecessary:none # Не использовать скобки в арифметических выражениях, если не нужно
-dotnet_style_parentheses_in_other_binary_operators = always_for_clarity:none # Всегда использовать скобки для ясности с другими бинарными операторами
-dotnet_style_parentheses_in_relational_binary_operators = never_if_unnecessary:none # Не использовать скобки в сравнениях, если не нужно
-dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion # Использовать ключевые слова (int, string) вместо типов BCL для локальных, параметров и членов
-dotnet_style_predefined_type_for_member_access = true:suggestion # Использовать ключевые слова (int, string) для доступа к членам
-dotnet_style_qualification_for_event = false:suggestion # Не использовать this. для событий
-dotnet_style_qualification_for_field = false:suggestion # Не использовать this. для полей
-dotnet_style_qualification_for_method = false:suggestion # Не использовать this. для методов
-dotnet_style_qualification_for_property = false:suggestion # Не использовать this. для свойств
-dotnet_style_require_accessibility_modifiers = for_non_interface_members:suggestion # Требовать модификаторы доступа для не-интерфейсных членов
-
-# ReSharper properties
-resharper_autodetect_indent_settings = true # Автоматически определять настройки отступов
-resharper_csharp_insert_final_newline = false # Не добавлять пустую строку в конце C# файлов
-resharper_formatter_off_tag = @formatter:off # Тег для отключения автоформатирования
-resharper_formatter_on_tag = @formatter:on # Тег для включения автоформатирования
-resharper_formatter_tags_enabled = true # Включить поддержку тегов форматирования
-resharper_fsharp_insert_final_newline = false # Не добавлять пустую строку в конце F# файлов
-resharper_html_insert_final_newline = false # Не добавлять пустую строку в конце HTML файлов
-resharper_resx_insert_final_newline = false # Не добавлять пустую строку в конце RESX файлов
-resharper_shaderlab_insert_final_newline = false # Не добавлять пустую строку в конце ShaderLab файлов
-resharper_T4_insert_final_newline = false # Не добавлять пустую строку в конце T4 файлов
-resharper_use_indent_from_vs = false # Не использовать настройки отступов из Visual Studio
-resharper_vb_insert_final_newline = false # Не добавлять пустую строку в конце VB файлов
-resharper_xmldoc_insert_final_newline = false # Не добавлять пустую строку в конце XML-документации
-resharper_xml_insert_final_newline = false # Не добавлять пустую строку в конце XML файлов
-
-# ReSharper inspection severities
-resharper_arrange_redundant_parentheses_highlighting = hint # Подсветка лишних скобок
-resharper_arrange_this_qualifier_highlighting = hint # Подсветка избыточного/отсутствующего this
-resharper_arrange_type_member_modifiers_highlighting = hint # Подсветка порядка модификаторов членов типа
-resharper_arrange_type_modifiers_highlighting = hint # Подсветка порядка модификаторов типа
-resharper_built_in_type_reference_style_for_member_access_highlighting = hint # Подсветка стиля обращения к встроенным типам
-resharper_built_in_type_reference_style_highlighting = hint # Подсветка стиля использования встроенных типов
-resharper_mvc_action_not_resolved_highlighting = warning # Не найдена MVC-экшн
-resharper_mvc_area_not_resolved_highlighting = warning # Не найдена MVC-area
-resharper_mvc_controller_not_resolved_highlighting = warning # Не найден MVC-контроллер
-resharper_mvc_masterpage_not_resolved_highlighting = warning # Не найдена masterpage
-resharper_mvc_partial_view_not_resolved_highlighting = warning # Не найден partial view
-resharper_mvc_template_not_resolved_highlighting = warning # Не найден шаблон MVC
-resharper_mvc_view_component_not_resolved_highlighting = warning # Не найден view component
-resharper_mvc_view_component_view_not_resolved_highlighting = warning # Не найден view component view
-resharper_mvc_view_not_resolved_highlighting = warning # Не найден view
-resharper_razor_assembly_not_resolved_highlighting = warning # Не найдена razor-сборка
-resharper_redundant_base_qualifier_highlighting = warning # Избыточный qualifier базового класса
-resharper_suggest_var_or_type_built_in_types_highlighting = hint # Подсказка по стилю var/тип для встроенных типов
-resharper_suggest_var_or_type_elsewhere_highlighting = hint # Подсказка по стилю var/тип в других случаях
-resharper_suggest_var_or_type_simple_types_highlighting = hint # Подсказка по стилю var/тип для простых типов
-resharper_web_config_module_not_resolved_highlighting = warning # Не найден модуль в web.config
-resharper_web_config_type_not_resolved_highlighting = warning # Не найден тип в web.config
-resharper_web_config_wrong_module_highlighting = warning # Неверный модуль в web.config
-
-
-# Code quality analyzers
-dotnet_analyzer_diagnostic.category-security.severity = error # Все предупреждения по безопасности — ошибка
-dotnet_code_quality.ca1802.api_surface = private, internal # Применять CA1802 только к private/internal
-
-
-# name all constant fields using PascalCase
-dotnet_naming_rule.constant_fields_should_be_pascal_case.severity = suggestion # Предупреждение, если константа не в PascalCase
-dotnet_naming_rule.constant_fields_should_be_pascal_case.symbols = constant_fields # Применять к символам constant_fields
-dotnet_naming_rule.constant_fields_should_be_pascal_case.style = pascal_case_style # Стиль PascalCase
-dotnet_naming_symbols.constant_fields.applicable_kinds = field # Применять к полям
-dotnet_naming_symbols.constant_fields.required_modifiers = const # Только для const
-dotnet_naming_style.pascal_case_style.capitalization = pascal_case # PascalCase стиль
-
-
-# static fields should have s_ prefix
-dotnet_naming_rule.static_fields_should_have_prefix.severity = suggestion # Предупреждение, если статическое поле без префикса s_
-dotnet_naming_rule.static_fields_should_have_prefix.symbols = static_fields # Применять к символам static_fields
-dotnet_naming_rule.static_fields_should_have_prefix.style = static_prefix_style # Стиль static_prefix_style
-dotnet_naming_symbols.static_fields.applicable_kinds = field # Применять к полям
-dotnet_naming_symbols.static_fields.required_modifiers = static # Только для static
-dotnet_naming_symbols.static_fields.applicable_accessibilities = private, internal, private_protected # Для приватных/внутренних
-dotnet_naming_style.static_prefix_style.required_prefix = s_ # Префикс s_
-dotnet_naming_style.static_prefix_style.capitalization = camel_case # Стиль camelCase
-
-
-# internal and private fields should be _camelCase
-dotnet_naming_rule.camel_case_for_private_internal_fields.severity = suggestion # Предупреждение, если приватное/внутреннее поле не _camelCase
-dotnet_naming_rule.camel_case_for_private_internal_fields.symbols = private_internal_fields # Применять к символам private_internal_fields
-dotnet_naming_rule.camel_case_for_private_internal_fields.style = camel_case_underscore_style # Стиль camel_case_underscore_style
-dotnet_naming_symbols.private_internal_fields.applicable_kinds = field # Применять к полям
-dotnet_naming_symbols.private_internal_fields.applicable_accessibilities = private, internal # Для приватных/внутренних
-dotnet_naming_style.camel_case_underscore_style.required_prefix = _ # Префикс _
-dotnet_naming_style.camel_case_underscore_style.capitalization = camel_case # Стиль camelCase
-
-
-# Code quality
-dotnet_style_readonly_field = true:suggestion # Предпочитать readonly для полей
-dotnet_code_quality_unused_parameters = non_public:suggestion # Предупреждать о неиспользуемых не-публичных параметрах
-
-# Expression-level preferences
-dotnet_style_object_initializer = true:suggestion # Предпочитать инициализацию объектов через { ... }
-dotnet_style_collection_initializer = true:suggestion # Предпочитать инициализацию коллекций через { ... }
-dotnet_style_explicit_tuple_names = true:suggestion # Предпочитать явные имена для элементов кортежей
-dotnet_style_coalesce_expression = true:suggestion # Предпочитать использование ?? для проверки на null
-dotnet_style_null_propagation = true:suggestion # Предпочитать ?. для обращения к членам объектов, которые могут быть null
-dotnet_style_prefer_is_null_check_over_reference_equality_method = true:suggestion # Предпочитать is null вместо object.ReferenceEquals
-dotnet_style_prefer_inferred_tuple_names = true:suggestion # Предпочитать неявные имена для кортежей (var (a, b) = ...)
-dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion # Предпочитать неявные имена для анонимных типов
-dotnet_style_prefer_auto_properties = true:suggestion # Предпочитать авто-свойства вместо полей с ручной реализацией
-dotnet_style_prefer_conditional_expression_over_assignment = true # Предпочитать тернарный оператор ?: вместо if-else при присваивании
-dotnet_style_prefer_conditional_expression_over_return = true # Предпочитать тернарный оператор ?: вместо if-else при возврате значения
-dotnet_style_prefer_expression_bodied_methods = when_on_single_line:suggestion
-dotnet_style_prefer_expression_bodied_properties = when_on_single_line:suggestion
-
-# C# files
+Code
 [*.cs]
-# New line preferences
-csharp_new_line_before_open_brace = all
-csharp_new_line_before_else = true
-csharp_new_line_before_catch = true
-csharp_new_line_before_finally = true
-csharp_new_line_before_members_in_object_initializers = true
-csharp_new_line_before_members_in_anonymous_types = true
-csharp_new_line_between_query_expression_clauses = true
 
-# Indentation preferences
-csharp_indent_block_contents = true
-csharp_indent_braces = false
-csharp_indent_case_contents = true
-csharp_indent_case_contents_when_block = true
-csharp_indent_switch_labels = true
-csharp_indent_labels = one_less_than_current
+Roslynator
+roslynator_accessibility_modifiers = explicit
+roslynator_body_style = block
+dotnet_diagnostic.rcs1224.severity = suggestion
+dotnet_diagnostic.rcs1225.severity = suggestion
+dotnet_diagnostic.rcs9001.severity = suggestion
 
-# Modifier preferences
-csharp_preferred_modifier_order = public, private, protected, internal, static, extern, new, virtual, abstract, sealed, override, readonly, unsafe, volatile, async:suggestion
+# Remove unnecessary 'else'
+dotnet_diagnostic.rcs1211.severity = suggestion
 
-# Code style defaults
-csharp_using_directive_placement = outside_namespace:error # using-директивы вне пространства имён
-csharp_prefer_braces = true # Всегда использовать фигурные скобки для if/for/while и т.д.
-csharp_preserve_single_line_blocks = true # Сохранять однострочные блоки кода
-csharp_preserve_single_line_statements = false # Не сохранять однострочные операторы
-csharp_prefer_static_local_function = true:suggestion # Предпочитать static для локальных функций
-csharp_prefer_simple_using_statement = false:none # Не использовать сокращённый using (C# 8)
-csharp_style_prefer_switch_expression = true:suggestion # Предпочитать switch-выражения вместо switch-блоков
+is_global = true
+roslynator_analyzers.enabled_by_default = true
 
-# Expression-bodied members
-csharp_style_expression_bodied_methods = true # Предпочитать методы с выражением-результатом (=>)
-csharp_style_expression_bodied_constructors = true # Предпочитать конструкторы с выражением-результатом
-csharp_style_expression_bodied_operators = true # Предпочитать операторы с выражением-результатом
-csharp_style_expression_bodied_properties = true # Предпочитать свойства с выражением-результатом
-csharp_style_expression_bodied_indexers = true # Предпочитать индексаторы с выражением-результатом
-csharp_style_expression_bodied_accessors = true # Предпочитать аксессоры с выражением-результатом
-csharp_style_expression_bodied_lambdas = true # Предпочитать лямбда-выражения с выражением-результатом
-csharp_style_expression_bodied_local_functions = true # Предпочитать локальные функции с выражением-результатом
+dotnet_diagnostic.RCS1001.severity = none
+dotnet_diagnostic.RCS1041.severity = error
+dotnet_diagnostic.RCS1202.severity = warning
 
-# Pattern matching
-csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion # Предпочитать pattern matching вместо is + cast
-csharp_style_pattern_matching_over_as_with_null_check = true:suggestion # Предпочитать pattern matching вместо as + null check
-csharp_style_inlined_variable_declaration = true:suggestion # Предпочитать объявление переменной прямо в pattern matching
+dotnet_diagnostic.IDE0058.severity = none
+dotnet_diagnostic.IDE0160.severity = none
+dotnet_diagnostic.IDE0290.severity = none
+dotnet_diagnostic.IDE0032.severity = none
+dotnet_diagnostic.IDE0055.severity = none
+dotnet_diagnostic.IDE1006.severity = none
+dotnet_diagnostic.IDE0001.severity = none
+dotnet_diagnostic.IDE0044.severity = suggestion
 
-# Expression-level preferences
-csharp_prefer_simple_default_expression = true:suggestion # Предпочитать default(T) вместо new T() для значимых типов
+dotnet_diagnostic.CA2219.severity = error
+dotnet_diagnostic.CA2218.severity = error
+dotnet_diagnostic.CA2224.severity = error
+dotnet_diagnostic.CA2227.severity = error
+dotnet_diagnostic.CA2251.severity = error
 
-# Null checking preferences
-csharp_style_throw_expression = true:suggestion # Использовать throw-выражения (например, ?? throw)
-csharp_style_conditional_delegate_call = true:suggestion # Использовать ?. для вызова делегатов
-
-# Other features
-csharp_style_prefer_index_operator = false:none # Не использовать индексатор ^ и ..
-csharp_style_prefer_range_operator = false:none # Не использовать range-оператор ..
-csharp_style_pattern_local_over_anonymous_function = false:none # Не использовать локальные функции вместо анонимных
-
-# Space preferences
-csharp_space_after_cast = false # Нет пробела после приведения типа: (int)x
-csharp_space_after_colon_in_inheritance_clause = true # Пробел после двоеточия в наследовании: class A : B
-csharp_space_after_comma = true # Пробел после запятой в списках
-csharp_space_after_dot = false # Нет пробела после точки
-csharp_space_after_keywords_in_control_flow_statements = true # Пробел после ключевых слов if, for, while и т.д.
-csharp_space_after_semicolon_in_for_statement = true # Пробел после точки с запятой в for
-csharp_space_around_binary_operators = before_and_after # Пробелы до и после бинарных операторов: a + b
-csharp_space_before_colon_in_inheritance_clause = true # Пробел перед двоеточием в наследовании: class A : B
-csharp_space_before_comma = false # Нет пробела перед запятой
-csharp_space_before_dot = false # Нет пробела перед точкой
-csharp_space_before_open_square_brackets = false # Нет пробела перед открывающей квадратной скобкой
-csharp_space_before_semicolon_in_for_statement = false # Нет пробела перед точкой с запятой в for
-csharp_space_between_empty_square_brackets = false # Нет пробела между пустыми квадратными скобками: arr[]
-csharp_space_between_method_call_empty_parameter_list_parentheses = false # Нет пробела между пустыми скобками вызова метода: Foo()
-csharp_space_between_method_call_name_and_opening_parenthesis = false # Нет пробела между именем метода и скобкой: Foo()
-csharp_space_between_method_call_parameter_list_parentheses = false # Нет пробела внутри скобок параметров вызова метода
-csharp_space_between_method_declaration_empty_parameter_list_parentheses = false # Нет пробела между пустыми скобками объявления метода
-csharp_space_between_method_declaration_name_and_open_parenthesis = false # Нет пробела между именем метода и скобкой при объявлении
-csharp_space_between_method_declaration_parameter_list_parentheses = false # Нет пробела внутри скобок параметров объявления метода
-csharp_space_between_parentheses = false # Нет пробелов внутри любых скобок
-csharp_space_between_square_brackets = false # Нет пробелов внутри квадратных скобок
-
-# Types: use keywords instead of BCL types, and permit var only when the type is clear
-csharp_style_var_for_built_in_types = false:suggestion # Не использовать var для встроенных типов (int, string и т.д.)
-csharp_style_var_when_type_is_apparent = false:none # Не использовать var, даже если тип очевиден из правой части
-csharp_style_var_elsewhere = false:suggestion # Не использовать var в остальных случаях (требовать явное указание типа)
-
-# Xml project files
-[*.{csproj,vbproj,vcxproj,vcxproj.filters,proj,nativeproj,locproj}]
-indent_size = 2
-
-# Xml build files
-[*.builds]
-indent_size = 2
-
-# Xml files
-[*.{xml,stylecop,resx,ruleset}]
-indent_size = 2
-
-# Xml config files
-[*.{props,targets,config,nuspec}]
-indent_size = 2
-
-# Shell scripts
-[*.sh]
-end_of_line = lf
-
-[*.{cmd, bat}]
-end_of_line = crlf
-
-[{*.har,*.jsb2,*.jsb3,*.json,*.jsonc,*.postman_collection,*.postman_collection.json,*.postman_environment,*.postman_environment.json,.babelrc,.eslintrc,.prettierrc,.stylelintrc,.ws-context,bowerrc,jest.config}]
-indent_style = space
-indent_size = 2
-
-[{*.yaml,*.yml}]
-indent_style = space
-indent_size = 2
-
-[*.{appxmanifest,asax,ascx,aspx,axaml,build,c,c++,c++m,cc,ccm,cginc,compute,cp,cpp,cppm,cs,cshtml,cu,cuh,cxx,cxxm,dtd,fs,fsi,fsscript,fsx,fx,fxh,h,hh,hlsl,hlsli,hlslinc,hpp,hxx,inc,inl,ino,ipp,ixx,master,ml,mli,mpp,mq4,mq5,mqh,mxx,nuspec,paml,razor,resw,resx,shader,skin,tpp,usf,ush,uxml,vb,xaml,xamlx,xoml,xsd}]
-indent_style = space
-indent_size = 4
-tab_width = 4
-
-# Определяем символы для публичных констант
-dotnet_naming_symbols.public_constants.applicable_kinds = field
-dotnet_naming_symbols.public_constants.applicable_accessibilities = public
-dotnet_naming_symbols.public_constants.required_modifiers = const
-
-# Задаём стиль именования:
-#   - all_upper: все символы в верхнем регистре
-#   - word_separator = _: использовать подчеркивание для разделения слов
-dotnet_naming_style.public_constants_style.capitalization = all_upper
-dotnet_naming_style.public_constants_style.word_separator = _
-
-# Применяем стиль к символам:
-dotnet_naming_rule.public_constants_rule.symbols = public_constants
-dotnet_naming_rule.public_constants_rule.style = public_constants_style
-dotnet_naming_rule.public_constants_rule.severity = suggestion
-
-# Настройка правил именования для приватных статических полей
-dotnet_naming_rule.private_static_fields_should_have_underscore.symbols = private_static_fields
-dotnet_naming_rule.private_static_fields_should_have_underscore.style = underscore_prefix_style
-dotnet_naming_rule.private_static_fields_should_have_underscore.severity = suggestion
-
-dotnet_naming_symbols.private_static_fields.applicable_kinds = field
-dotnet_naming_symbols.private_static_fields.applicable_accessibilities = private
-dotnet_naming_symbols.private_static_fields.required_modifiers = static
-
-dotnet_naming_style.underscore_prefix_style.capitalization = camel_case
-dotnet_naming_style.underscore_prefix_style.required_prefix = _
-
-# Определяем символы для приватных констант
-dotnet_naming_symbols.private_constants.applicable_kinds = field
-dotnet_naming_symbols.private_constants.applicable_accessibilities = private
-dotnet_naming_symbols.private_constants.required_modifiers = const
-
-# Задаём стиль именования:
-#   - all_upper: все символы в верхнем регистре
-#   - word_separator = _: использовать подчеркивание для разделения слов
-dotnet_naming_style.private_constants_style.capitalization = all_upper
-dotnet_naming_style.private_constants_style.word_separator = _
-
-# Применяем стиль к символам:
-dotnet_naming_rule.private_constants_rule.symbols = private_constants
-dotnet_naming_rule.private_constants_rule.style = private_constants_style
-dotnet_naming_rule.private_constants_rule.severity = suggestion
-
-#STYLE COP ANALYZERS
-dotnet_diagnostic.SA0001.severity = none
-dotnet_diagnostic.SA1500.severity = none
-dotnet_diagnostic.SA1502.severity = none
-dotnet_diagnostic.SA1508.severity = none
-dotnet_diagnostic.sa1309.severity = none
-dotnet_diagnostic.SA1101.severity = none
-dotnet_diagnostic.SA1137.severity = none
-dotnet_diagnostic.SA1112.severity = none
-dotnet_diagnostic.SA1600.severity = error
-dotnet_diagnostic.SA1503.severity = none
-dotnet_diagnostic.SA1206.severity = none
-dotnet_diagnostic.SA1313.severity = none
-dotnet_diagnostic.SA1314.severity = none
-dotnet_diagnostic.SA1010.severity = none
-dotnet_diagnostic.SA1601.severity = none
-dotnet_diagnostic.SA1106.severity = none
-dotnet_diagnostic.SA1117.severity = none
-dotnet_diagnostic.SA1024.severity = none
-dotnet_diagnostic.SA1009.severity = none
-dotnet_diagnostic.SA1000.severity = none
-dotnet_diagnostic.SA1009.severity = none
-dotnet_diagnostic.SA1011.severity = none
-dotnet_diagnostic.SA1101.severity = none
-dotnet_diagnostic.SA1633.severity = none
-dotnet_diagnostic.SA1623.severity = none
-dotnet_diagnostic.SA1118.severity = none
-dotnet_diagnostic.eSA1128.severity = none
-dotnet_diagnostic.SA1401.severity = none
-dotnet_diagnostic.SA1402.severity = none
-dotnet_diagnostic.SA1111.severity = none
-dotnet_diagnostic.SA1027.severity = none
-dotnet_diagnostic.SA1204.severity = error
-dotnet_diagnostic.SA1516.severity = none
-dotnet_diagnostic.SA1512.severity = none
-dotnet_diagnostic.SA1515.severity = none
-dotnet_diagnostic.SA1501.severity = none
-dotnet_diagnostic.SA1505.severity = none
-dotnet_diagnostic.SA1518.severity = none
-dotnet_diagnostic.SA1300.severity = none
-dotnet_diagnostic.SA1316.severity = none
-dotnet_diagnostic.SA1201.severity = none
-dotnet_diagnostic.SA1202.severity = error
-dotnet_diagnostic.SA1203.severity = error
-dotnet_diagnostic.SA1205.severity = error
-dotnet_diagnostic.SA1207.severity = error
-dotnet_diagnostic.SA1212.severity = error
-dotnet_diagnostic.SA1214.severity = error
-dotnet_diagnostic.IDE0008.severity = error
-dotnet_diagnostic.SA1642.severity = none
-dotnet_diagnostic.SA1215.severity = error
-dotnet_diagnostic.SA1028.severity = none
-dotnet_diagnostic.SA1507.severity = none
+dotnet_diagnostic.IDE0305.severity = suggestion
+dotnet_diagnostic.IDE0046.severity = suggestion
 dotnet_diagnostic.IDE0002.severity = suggestion
-dotnet_diagnostic.IDE0005.severity = error
+dotnet_diagnostic.IDE0003.severity = suggestion
+dotnet_diagnostic.IDE0004.severity = suggestion
+dotnet_diagnostic.IDE0005.severity = suggestion
+dotnet_diagnostic.IDE0010.severity = suggestion
+dotnet_diagnostic.IDE0028.severity = suggestion
+dotnet_diagnostic.IDE0030.severity = suggestion
+dotnet_diagnostic.IDE0029.severity = suggestion
+dotnet_diagnostic.IDE0051.severity = suggestion
+dotnet_diagnostic.IDE0052.severity = suggestion
+dotnet_diagnostic.IDE0059.severity = suggestion
+dotnet_diagnostic.IDE0063.severity = suggestion
+dotnet_diagnostic.IDE0070.severity = suggestion
+dotnet_diagnostic.IDE0082.severity = suggestion
+dotnet_diagnostic.IDE0090.severity = suggestion
+dotnet_diagnostic.IDE0120.severity = suggestion
+dotnet_diagnostic.IDE0140.severity = suggestion
+dotnet_diagnostic.IDE0250.severity = suggestion
+dotnet_diagnostic.IDE0251.severity = suggestion
+dotnet_diagnostic.IDE0270.severity = suggestion
+dotnet_diagnostic.IDE0280.severity = suggestion
+dotnet_diagnostic.IDE0075.severity = suggestion
+dotnet_diagnostic.IDE0078.severity = suggestion
 
-dotnet_diagnostic.RCS1213.severity = suggestion
-dotnet_diagnostic.RCS1036.severity = suggestion
-dotnet_diagnostic.RCS1037.severity = suggestion
-dotnet_diagnostic.RCS1212.severity = suggestion
-dotnet_diagnostic.RCS1016.severity = suggestion
-dotnet_diagnostic.RCS1206.severity = suggestion
-dotnet_diagnostic.RCS1132.severity = none
-dotnet_diagnostic.RCS1213.severity = suggestion
+dotnet_diagnostic.IDE0350.severity = error
+dotnet_diagnostic.IDE0260.severity = error
+dotnet_diagnostic.IDE0240.severity = error
+dotnet_diagnostic.IDE0220.severity = error
+dotnet_diagnostic.IDE0130.severity = error
+dotnet_diagnostic.IDE0038.severity = error
+dotnet_diagnostic.IDE0035.severity = error
+dotnet_diagnostic.IDE0033.severity = error
+dotnet_diagnostic.IDE0011.severity = error
+dotnet_diagnostic.IDE0020.severity = error
+dotnet_diagnostic.IDE0021.severity = error
+dotnet_diagnostic.IDE0022.severity = error
+dotnet_diagnostic.IDE0019.severity = error
+dotnet_diagnostic.IDE0008.severity = error
 
-# Избегайте 'async void' (приводит к падению процесса)
-dotnet_diagnostic.AsyncFixer01.severity = error
-# Не используйте Task.Run внутри других Task.Run (избыточность)
-dotnet_diagnostic.AsyncFixer02.severity = error
-# Избегайте блокирующих вызовов (.Wait() или .Result)
-dotnet_diagnostic.AsyncFixer03.severity = error
 
-# Подозрительное сравнение объектов (возможная логическая ошибка)
-dotnet_diagnostic.EPC11.severity = error
-# Использование Side-Effects в условиях (затрудняет отладку)
-dotnet_diagnostic.EPC14.severity = error
-# Некорректная обработка исключений (проглатывание stack trace)
-dotnet_diagnostic.ERP021.severity = error
-
-# Делайте члены static, если они не обращаются к данным экземпляра (быстрее вызов)
-dotnet_diagnostic.CA1822.severity = error
-# Избегайте пустых выделений массивов (используйте Array.Empty<T>)
-dotnet_diagnostic.CA1825.severity = error
-# Используйте Length/Count вместо Any() для коллекций, где это возможно (быстрее)
+dotnet_diagnostic.CA2026.severity = error
+dotnet_diagnostic.CA2025.severity = error
+dotnet_diagnostic.CA2021.severity = error
+dotnet_diagnostic.CA2016.severity = error
+dotnet_diagnostic.CA2014.severity = error
+dotnet_diagnostic.CA2012.severity = error
+dotnet_diagnostic.CA2007.severity = error
+dotnet_diagnostic.CA2002.severity = error
+dotnet_diagnostic.CA2000.severity = error
+dotnet_diagnostic.CA1877.severity = error
+dotnet_diagnostic.CA1875.severity = error
+dotnet_diagnostic.CA1874.severity = error
+dotnet_diagnostic.CA1869.severity = error
+dotnet_diagnostic.CA1868.severity = error
+dotnet_diagnostic.CA1862.severity = error
+dotnet_diagnostic.CA1860.severity = error
+dotnet_diagnostic.CA1859.severity = error
+dotnet_diagnostic.CA1858.severity = error
+dotnet_diagnostic.CA1855.severity = error
+dotnet_diagnostic.CA1854.severity = error
+dotnet_diagnostic.CA1853.severity = error
+dotnet_diagnostic.CA1847.severity = error
+dotnet_diagnostic.CA1846.severity = error
+dotnet_diagnostic.CA1844.severity = error
+dotnet_diagnostic.CA1845.severity = error
+dotnet_diagnostic.CA1843.severity = error
+dotnet_diagnostic.CA1842.severity = error
+dotnet_diagnostic.CA1841.severity = error
+dotnet_diagnostic.CA1840.severity = error
+dotnet_diagnostic.CA1839.severity = error
+dotnet_diagnostic.CA1837.severity = error
+dotnet_diagnostic.CA1836.severity = error
+dotnet_diagnostic.CA1835.severity = error
+dotnet_diagnostic.CA1834.severity = error
+dotnet_diagnostic.CA1833.severity = error
+dotnet_diagnostic.CA1832.severity = error
+dotnet_diagnostic.CA1831.severity = error
+dotnet_diagnostic.CA1829.severity = error
+dotnet_diagnostic.CA1830.severity = error
+dotnet_diagnostic.CA1828.severity = error
+dotnet_diagnostic.CA1826.severity = error
 dotnet_diagnostic.CA1827.severity = error
-# Избегайте лишних проверок на приведение типов (as + null check лучше чем is + cast)
+dotnet_diagnostic.CA1825.severity = error
+dotnet_diagnostic.CA1823.severity = suggestion
 dotnet_diagnostic.CA1820.severity = error
+dotnet_diagnostic.CA1819.severity = error
+dotnet_diagnostic.CA1805.severity = error
+dotnet_diagnostic.CA1802.severity = error
+dotnet_diagnostic.CA1716.severity = error
+dotnet_diagnostic.CA1000.severity = none
+dotnet_diagnostic.CA5401.severity = none
+dotnet_diagnostic.CA2225.severity = none
+dotnet_diagnostic.CA1720.severity = none
+dotnet_diagnostic.CA2201.severity = none
+dotnet_diagnostic.CA1721.severity = none
+dotnet_diagnostic.CA2211.severity = suggestion
+dotnet_diagnostic.CA2213.severity = none
+dotnet_diagnostic.CA2000.severity = none
+dotnet_diagnostic.CA1016.severity = none
+dotnet_diagnostic.CA1715.severity = none
+dotnet_diagnostic.CA1716.severity = none
+dotnet_diagnostic.CA1032.severity = none
+dotnet_diagnostic.CA1822.severity = suggestion
+dotnet_diagnostic.CA1065.severity = error
+dotnet_diagnostic.CA1066.severity = error
+dotnet_diagnostic.CA1067.severity = error
+dotnet_diagnostic.CA1068.severity = error
+dotnet_diagnostic.CA1069.severity = error
+dotnet_diagnostic.CA1070.severity = error
+dotnet_diagnostic.CA1707.severity = error
+dotnet_diagnostic.CA1053.severity = error
+dotnet_diagnostic.CA1052.severity = error
+dotnet_diagnostic.CA1064.severity = error
+dotnet_diagnostic.CA1061.severity = error
+dotnet_diagnostic.CA1051.severity = error
+dotnet_diagnostic.CA1050.severity = error
+dotnet_diagnostic.CA1047.severity = error
+dotnet_diagnostic.CA1044.severity = error
+dotnet_diagnostic.CA1515.severity = none
+dotnet_diagnostic.CA1040.severity = none
+dotnet_diagnostic.CA5394.severity = none
+dotnet_diagnostic.CA1048.severity = none
+dotnet_diagnostic.CA1707.severity = none
+dotnet_diagnostic.CS8600.severity = none
+dotnet_diagnostic.CS8714.severity = none
+dotnet_diagnostic.CA1002.severity = error
+dotnet_diagnostic.CA1812.severity = none
+dotnet_diagnostic.CA1005.severity = error
+dotnet_diagnostic.CA1008.severity = error
+dotnet_diagnostic.CA1010.severity = error
+dotnet_diagnostic.CA1012.severity = error
+dotnet_diagnostic.CA1018.severity = error
+dotnet_diagnostic.CA1024.severity = error
+dotnet_diagnostic.CA1062.severity = none
+dotnet_diagnostic.CA1056.severity = none
+dotnet_diagnostic.CA1305.severity = none
+dotnet_diagnostic.CA1711.severity = none
+dotnet_diagnostic.CA1708.severity = none
+dotnet_diagnostic.CA1054.severity = none
+dotnet_diagnostic.CA1031.severity = none
+dotnet_diagnostic.CA1034.severity = none
+dotnet_diagnostic.CA2007.severity = none
 
-# Удалять неиспользуемые параметры (уменьшает потребление стека)
-dotnet_diagnostic.RCS1163.severity = error
-# Оптимизировать вызовы LINQ (например, .Where().Any() -> .Any())
-dotnet_diagnostic.RCS1077.severity = error
-# Избегать двойного вызова методов получения данных
-dotnet_diagnostic.RCS1049.severity = error
+dotnet_analyzer_diagnostic.category-Design.severity = error
+dotnet_analyzer_diagnostic.category-Perfomance.severity = error
+dotnet_analyzer_diagnostic.category-Reliability.severity = error
+dotnet_analyzer_diagnostic.category-Style.severity = error
 
-# Запретить var для локальных переменных
-dotnet_style_require_var_for_local_variables = false:error
+roslynator_refactoring.add_all_properties_to_initializer.enabled = true
+roslynator_refactoring.add_argument_name.enabled = true
+roslynator_refactoring.add_braces.enabled = true
+roslynator_refactoring.add_braces_to_if_else.enabled = true
+roslynator_refactoring.add_braces_to_switch_section.enabled = true
+roslynator_refactoring.add_braces_to_switch_sections.enabled = true
+roslynator_refactoring.add_default_value_to_parameter.enabled = true
+roslynator_refactoring.add_empty_line_between_declarations.enabled = true
+roslynator_refactoring.add_exception_element_to_documentation_comment.enabled = true
+roslynator_refactoring.add_generic_parameter_to_declaration.enabled = true
+roslynator_refactoring.add_member_to_interface.enabled = true
+roslynator_refactoring.add_missing_cases_to_switch.enabled = true
+roslynator_refactoring.add_parameter_to_interface_member.enabled = true
+roslynator_refactoring.add_tag_to_documentation_comment.enabled = true
+roslynator_refactoring.add_using_directive.enabled = true
+roslynator_refactoring.add_using_static_directive.enabled = true
+roslynator_refactoring.call_extension_method_as_instance_method.enabled = true
+roslynator_refactoring.call_indexof_instead_of_contains.enabled = true
+roslynator_refactoring.change_accessibility.enabled = true
+roslynator_refactoring.change_method_return_type_to_void.enabled = true
+roslynator_refactoring.change_type_according_to_expression.enabled = true
+roslynator_refactoring.check_expression_for_null.enabled = true
+roslynator_refactoring.check_parameter_for_null.enabled = true
+roslynator_refactoring.comment_out_member_declaration.enabled = true
+roslynator_refactoring.comment_out_statement.enabled = true
+roslynator_refactoring.convert_auto_property_to_full_property.enabled = true
+roslynator_refactoring.convert_auto_property_to_full_property_without_backing_field.enabled = true
+roslynator_refactoring.convert_block_body_to_expression_body.enabled = true
+roslynator_refactoring.convert_comment_to_documentation_comment.enabled = true
+roslynator_refactoring.convert_conditional_expression_to_if_else.enabled = true
+roslynator_refactoring.convert_do_to_while.enabled = true
+roslynator_refactoring.convert_expression_body_to_block_body.enabled = true
+roslynator_refactoring.convert_for_to_foreach.enabled = true
+roslynator_refactoring.convert_for_to_while.enabled = true
+roslynator_refactoring.convert_foreach_to_for.enabled = true
+roslynator_refactoring.convert_foreach_to_for_and_reverse_loop.enabled = false
+roslynator_refactoring.convert_hasflag_call_to_bitwise_operation.enabled = true
+roslynator_refactoring.convert_hexadecimal_literal_to_decimal_literal.enabled = true
+roslynator_refactoring.convert_if_to_conditional_expression.enabled = true
+roslynator_refactoring.convert_if_to_switch.enabled = true
+roslynator_refactoring.convert_interpolated_string_to_concatenation.enabled = true
+roslynator_refactoring.convert_interpolated_string_to_string_format.enabled = true
+roslynator_refactoring.convert_interpolated_string_to_string_literal.enabled = true
+roslynator_refactoring.convert_lambda_block_body_to_expression_body.enabled = true
+roslynator_refactoring.convert_lambda_expression_body_to_block_body.enabled = true
+roslynator_refactoring.convert_method_group_to_lambda.enabled = true
+roslynator_refactoring.convert_regular_string_literal_to_verbatim_string_literal.enabled = true
+roslynator_refactoring.convert_return_statement_to_if.enabled = true
+roslynator_refactoring.convert_statements_to_if_else.enabled = true
+roslynator_refactoring.convert_string_format_to_interpolated_string.enabled = true
+roslynator_refactoring.convert_switch_expression_to_switch_statement.enabled = true
+roslynator_refactoring.convert_switch_to_if.enabled = true
+roslynator_refactoring.convert_verbatim_string_literal_to_regular_string_literal.enabled = true
+roslynator_refactoring.convert_verbatim_string_literal_to_regular_string_literals.enabled = true
+roslynator_refactoring.convert_while_to_do.enabled = true
+roslynator_refactoring.convert_while_to_for.enabled = true
+roslynator_refactoring.copy_argument.enabled = true
+roslynator_refactoring.copy_documentation_comment_from_base_member.enabled = true
+roslynator_refactoring.copy_member_declaration.enabled = true
+roslynator_refactoring.copy_parameter.enabled = true
+roslynator_refactoring.copy_statement.enabled = true
+roslynator_refactoring.copy_switch_section.enabled = true
+roslynator_refactoring.deconstruct_foreach_variable.enabled = true
+roslynator_refactoring.expand_coalesce_expression.enabled = true
+roslynator_refactoring.expand_compound_assignment.enabled = true
+roslynator_refactoring.expand_event_declaration.enabled = true
+roslynator_refactoring.expand_initializer.enabled = false
+roslynator_refactoring.expand_positional_constructor.enabled = true
+roslynator_refactoring.extract_event_handler_method.enabled = true
+roslynator_refactoring.extract_expression_from_condition.enabled = true
+roslynator_refactoring.extract_type_declaration_to_new_file.enabled = false
+roslynator_refactoring.generate_base_constructors.enabled = true
+roslynator_refactoring.generate_combined_enum_member.enabled = true
+roslynator_refactoring.generate_enum_member.enabled = true
+roslynator_refactoring.generate_enum_values.enabled = true
+roslynator_refactoring.generate_event_invoking_method.enabled = true
+roslynator_refactoring.generate_property_for_debuggerdisplay_attribute.enabled = true
+roslynator_refactoring.implement_custom_enumerator.enabled = true
+roslynator_refactoring.implement_iequatable.enabled = true
+roslynator_refactoring.initialize_field_from_constructor.enabled = true
+roslynator_refactoring.initialize_local_variable_with_default_value.enabled = true
+roslynator_refactoring.inline_alias_expression.enabled = true
+roslynator_refactoring.inline_constant.enabled = true
+roslynator_refactoring.inline_constant_value.enabled = true
+roslynator_refactoring.inline_method.enabled = true
+roslynator_refactoring.inline_property.enabled = true
+roslynator_refactoring.inline_using_static.enabled = true
+roslynator_refactoring.insert_string_interpolation.enabled = true
+roslynator_refactoring.introduce_and_initialize_field.enabled = true
+roslynator_refactoring.introduce_and_initialize_property.enabled = true
+roslynator_refactoring.introduce_constructor.enabled = false
+roslynator_refactoring.introduce_field_to_lock_on.enabled = true
+roslynator_refactoring.introduce_local_variable.enabled = true
+roslynator_refactoring.invert_binary_expression.enabled = true
+roslynator_refactoring.invert_boolean_literal.enabled = true
+roslynator_refactoring.invert_conditional_expression.enabled = true
+roslynator_refactoring.invert_if.enabled = true
+roslynator_refactoring.invert_if_else.enabled = true
+roslynator_refactoring.invert_is_expression.enabled = true
+roslynator_refactoring.invert_linq_method_call.enabled = true
+roslynator_refactoring.invert_operator.enabled = true
+roslynator_refactoring.invert_prefix_or_postfix_unary_expression.enabled = true
+roslynator_refactoring.join_string_expressions.enabled = true
+roslynator_refactoring.make_member_abstract.enabled = true
+roslynator_refactoring.make_member_virtual.enabled = true
+roslynator_refactoring.merge_attributes.enabled = true
+roslynator_refactoring.merge_if_statements.enabled = true
+roslynator_refactoring.merge_if_with_parent_if.enabled = true
+roslynator_refactoring.merge_local_declarations.enabled = true
+roslynator_refactoring.merge_switch_sections.enabled = true
+roslynator_refactoring.move_unsafe_context_to_containing_declaration.enabled = true
+roslynator_refactoring.notify_when_property_changes.enabled = true
+roslynator_refactoring.parenthesize_expression.enabled = true
+roslynator_refactoring.promote_local_variable_to_parameter.enabled = true
+roslynator_refactoring.remove_all_comments.enabled = true
+roslynator_refactoring.remove_all_comments_except_documentation_comments.enabled = true
+roslynator_refactoring.remove_all_documentation_comments.enabled = false
+roslynator_refactoring.remove_all_member_declarations.enabled = true
+roslynator_refactoring.remove_all_preprocessor_directives.enabled = true
+roslynator_refactoring.remove_all_region_directives.enabled = true
+roslynator_refactoring.remove_all_statements.enabled = true
+roslynator_refactoring.remove_all_switch_sections.enabled = true
+roslynator_refactoring.remove_argument_name.enabled = true
+roslynator_refactoring.remove_async_await.enabled = true
+roslynator_refactoring.remove_braces.enabled = true
+roslynator_refactoring.remove_braces_from_if_else.enabled = true
+roslynator_refactoring.remove_braces_from_switch_section.enabled = true
+roslynator_refactoring.remove_braces_from_switch_sections.enabled = true
+roslynator_refactoring.remove_comment.enabled = true
+roslynator_refactoring.remove_condition_from_last_else.enabled = true
+roslynator_refactoring.remove_containing_statement.enabled = true
+roslynator_refactoring.remove_empty_lines.enabled = true
+roslynator_refactoring.remove_enum_member_value.enabled = true
+roslynator_refactoring.remove_instantiation_of_local_variable.enabled = true
+roslynator_refactoring.remove_interpolation.enabled = true
+roslynator_refactoring.remove_member_declaration.enabled = true
+roslynator_refactoring.remove_member_declarations_above_or_below.enabled = true
+roslynator_refactoring.remove_parentheses.enabled = true
+roslynator_refactoring.remove_preprocessor_directive.enabled = true
+roslynator_refactoring.remove_property_initializer.enabled = true
+roslynator_refactoring.remove_region.enabled = true
+roslynator_refactoring.remove_statement.enabled = true
+roslynator_refactoring.remove_unnecessary_assignment.enabled = true
+roslynator_refactoring.rename_identifier_according_to_type_name.enabled = true
+roslynator_refactoring.rename_method_according_to_type_name.enabled = true
+roslynator_refactoring.rename_parameter_according_to_type_name.enabled = true
+roslynator_refactoring.rename_property_according_to_type_name.enabled = true
+roslynator_refactoring.replace_as_expression_with_explicit_cast.enabled = true
+roslynator_refactoring.replace_conditional_expression_with_true_or_false_branch.enabled = true
+roslynator_refactoring.replace_equality_operator_with_string_equals.enabled = true
+roslynator_refactoring.replace_equality_operator_with_string_isnullorempty.enabled = true
+roslynator_refactoring.replace_equality_operator_with_string_isnullorwhitespace.enabled = true
+roslynator_refactoring.replace_explicit_cast_with_as_expression.enabled = true
+roslynator_refactoring.replace_interpolated_string_with_interpolation_expression.enabled = true
+roslynator_refactoring.replace_method_with_property.enabled = false
+roslynator_refactoring.replace_null_literal_with_default_expression.enabled = true
+roslynator_refactoring.replace_prefix_operator_with_postfix_operator.enabled = true
+roslynator_refactoring.replace_property_with_method.enabled = true
+roslynator_refactoring.reverse_for_statement.enabled = true
+roslynator_refactoring.simplify_if.enabled = true
+roslynator_refactoring.sort_case_labels.enabled = true
+roslynator_refactoring.sort_member_declarations.enabled = true
+roslynator_refactoring.split_attributes.enabled = true
+roslynator_refactoring.split_if.enabled = true
+roslynator_refactoring.split_if_else.enabled = true
+roslynator_refactoring.split_local_declaration_and_assignment.enabled = true
+roslynator_refactoring.split_switch_labels.enabled = true
+roslynator_refactoring.split_variable_declaration.enabled = true
+roslynator_refactoring.swap_binary_operands.enabled = true
+roslynator_refactoring.swap_member_declarations.enabled = true
+roslynator_refactoring.sync_property_name_and_backing_field_name.enabled = true
+roslynator_refactoring.uncomment_multiline_comment.enabled = true
+roslynator_refactoring.uncomment_singleline_comment.enabled = true
+roslynator_refactoring.use_coalesce_expression_instead_of_if.enabled = true
+roslynator_refactoring.use_constant_instead_of_readonly_field.enabled = true
+roslynator_refactoring.use_element_access_instead_of_linq_method.enabled = true
+roslynator_refactoring.use_enumerator_explicitly.enabled = true
+roslynator_refactoring.use_explicit_type.enabled = true
+roslynator_refactoring.use_implicit_type.enabled = true
+roslynator_refactoring.use_index_initializer.enabled = true
+roslynator_refactoring.use_lambda_instead_of_anonymous_method.enabled = true
+roslynator_refactoring.use_list_instead_of_yield.enabled = true
+roslynator_refactoring.use_object_initializer.enabled = true
+roslynator_refactoring.use_readonly_field_instead_of_constant.enabled = true
+roslynator_refactoring.use_string_empty_instead_of_empty_string_literal.enabled = false
+roslynator_refactoring.use_stringbuilder_instead_of_concatenation.enabled = true
+roslynator_refactoring.wrap_arguments.enabled = true
+roslynator_refactoring.wrap_binary_expression.enabled = true
+roslynator_refactoring.wrap_call_chain.enabled = true
+roslynator_refactoring.wrap_conditional_expression.enabled = true
+roslynator_refactoring.wrap_constraint_clauses.enabled = true
+roslynator_refactoring.wrap_initializer_expressions.enabled = true
+roslynator_refactoring.wrap_lines_in_preprocessor_directive.enabled = true
+roslynator_refactoring.wrap_lines_in_region.enabled = true
+roslynator_refactoring.wrap_lines_in_try_catch.enabled = true
+roslynator_refactoring.wrap_parameters.enabled = true
+roslynator_refactoring.wrap_statements_in_condition.enabled = true
+roslynator_refactoring.wrap_statements_in_using_statement.enabled = true
 
-dotnet_style_require_var_when_type_is_apparent = false:error
-dotnet_style_require_var_when_type_is_not_apparent = false:error
-dotnet_style_require_var_for_built_in_types = false:error
+# Compiler diagnostic fixes
 
-# Порядок использования using (систематизация кода)
-dotnet_diagnostic.SA1200.severity = error
-# Запрет пустых строк в начале методов
-dotnet_diagnostic.SA1507.severity = error
-
-dotnet_diagnostic.CS8601.severity = error
-dotnet_diagnostic.CS8602.severity = error
-dotnet_diagnostic.CS8603.severity = error
-
-# Отключаем или меняем уровень серьезности предупреждения SA1310, чтобы не конфликтовало с новыми правилами.
-dotnet_diagnostic.SA1310.severity = none
-
-# AsyncFixer:
-dotnet_diagnostic.AsyncFixer02.severity = error
-dotnet_diagnostic.AsyncFixer03.severity = error
-dotnet_diagnostic.AsyncFixer04.severity = error
-dotnet_diagnostic.AsyncFixer05.severity = error
-
-# Error prone settings
-dotnet_diagnostic.EPC13.severity = error
-dotnet_diagnostic.EPC14.severity = error
-dotnet_diagnostic.EPC15.severity = error
-dotnet_diagnostic.EPC16.severity = error
-dotnet_diagnostic.ERP022.severity = none
-
-# RCS (Roslyn code analyzers) settings
-dotnet_diagnostic.SA1602.severity = error
-dotnet_diagnostic.RZ3600.severity = none
-dotnet_diagnostic.RCS1005.severity = suggestion
-dotnet_diagnostic.RCS1015.severity = error
-dotnet_diagnostic.RCS1021.severity = suggestion
-dotnet_diagnostic.RCS1058.severity = suggestion
-dotnet_diagnostic.RCS1077.severity = error
-dotnet_diagnostic.RCS1084.severity = suggestion
-dotnet_diagnostic.RCS1097.severity = suggestion
-dotnet_diagnostic.RCS1118.severity = suggestion
-dotnet_diagnostic.RCS1128.severity = suggestion
-dotnet_diagnostic.RCS1132.severity = error
-dotnet_diagnostic.RCS1141.severity = suggestion
-dotnet_diagnostic.RCS1140.severity = suggestion
-dotnet_diagnostic.RCS1138.severity = suggestion
-dotnet_diagnostic.RCS1163.severity = error
-dotnet_diagnostic.RCS1179.severity = error
-dotnet_diagnostic.RCS1188.severity = suggestion
-dotnet_diagnostic.RCS1186.severity = suggestion
-dotnet_diagnostic.RCS1192.severity = suggestion
-dotnet_diagnostic.RCS1190.severity = suggestion
-dotnet_diagnostic.RCS1197.severity = suggestion
-dotnet_diagnostic.RCS1207.severity = suggestion
-dotnet_diagnostic.RCS1220.severity = suggestion
-dotnet_diagnostic.RCS1224.severity = suggestion
-dotnet_diagnostic.RCS1225.severity = suggestion
-dotnet_diagnostic.RCS1228.severity = error
-dotnet_diagnostic.RCS1241.severity = none
-dotnet_diagnostic.RCS1243.severity = error
-dotnet_diagnostic.RCS1244.severity = suggestion
-dotnet_diagnostic.RCS1246.severity = suggestion
-dotnet_diagnostic.RCS1247.severity = error
-dotnet_diagnostic.RCS1248.severity = suggestion
-dotnet_diagnostic.RCS1249.severity = warning
-dotnet_diagnostic.RCS1250.severity = suggestion
-
-dotnet_code_quality.enable_all_analyzers = true
-csharp_style_expression_bodied_methods = when_on_single_line:suggestion
-csharp_style_expression_bodied_constructors = false:suggestion
-csharp_style_expression_bodied_operators = when_on_single_line:suggestion
-csharp_style_expression_bodied_properties = true:suggestion
-csharp_style_expression_bodied_indexers = true:suggestion
-csharp_style_expression_bodied_accessors = true:suggestion
-csharp_style_expression_bodied_lambdas = true:suggestion
-csharp_style_expression_bodied_local_functions = when_on_single_line:suggestion
-csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
-csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
-csharp_style_prefer_switch_expression = true:suggestion
-csharp_style_prefer_pattern_matching = true:suggestion
-csharp_style_prefer_not_pattern = true:suggestion
-csharp_style_prefer_extended_property_pattern = true:suggestion
-csharp_style_throw_expression = true:suggestion
-csharp_style_conditional_delegate_call = true:warning
-dotnet_style_coalesce_expression = true:suggestion
-dotnet_style_null_propagation = true:suggestion
-dotnet_style_prefer_is_null_check_over_reference_equality_method = true:suggestion
-csharp_prefer_simple_using_statement = true:suggestion
-csharp_style_namespace_declarations = file_scoped:warning
-csharp_style_prefer_method_group_conversion = true:suggestion
-csharp_style_prefer_top_level_statements = true:suggestion
-csharp_style_prefer_primary_constructors = true:suggestion
-dotnet_style_prefer_auto_properties = true:suggestion
-dotnet_style_prefer_conditional_expression_over_assignment = true:suggestion
-dotnet_style_prefer_conditional_expression_over_return = false:suggestion
-dotnet_style_prefer_inferred_tuple_names = true:suggestion
-dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion
-dotnet_style_prefer_compound_assignment = true:suggestion
-dotnet_style_prefer_simplified_interpolation = true:suggestion
-dotnet_style_prefer_simplified_boolean_expressions = true:suggestion
-dotnet_style_collection_initializer = true:suggestion
-dotnet_style_prefer_collection_expression = when_types_loosely_match:suggestion
+roslynator_compiler_diagnostic_fix.cs0019.enabled = true
+roslynator_compiler_diagnostic_fix.cs0021.enabled = true
+roslynator_compiler_diagnostic_fix.cs0023.enabled = true
+roslynator_compiler_diagnostic_fix.cs0029.enabled = true
+roslynator_compiler_diagnostic_fix.cs0030.enabled = true
+roslynator_compiler_diagnostic_fix.cs0037.enabled = true
+roslynator_compiler_diagnostic_fix.cs0069.enabled = true
+roslynator_compiler_diagnostic_fix.cs0077.enabled = true
+roslynator_compiler_diagnostic_fix.cs0080.enabled = true
+roslynator_compiler_diagnostic_fix.cs0101.enabled = true
+roslynator_compiler_diagnostic_fix.cs0102.enabled = true
+roslynator_compiler_diagnostic_fix.cs0103.enabled = true
+roslynator_compiler_diagnostic_fix.cs0106.enabled = true
+roslynator_compiler_diagnostic_fix.cs0107.enabled = true
+roslynator_compiler_diagnostic_fix.cs0108.enabled = true
+roslynator_compiler_diagnostic_fix.cs0109.enabled = true
+roslynator_compiler_diagnostic_fix.cs0112.enabled = true
+roslynator_compiler_diagnostic_fix.cs0114.enabled = true
+roslynator_compiler_diagnostic_fix.cs0115.enabled = true
+roslynator_compiler_diagnostic_fix.cs0119.enabled = true
+roslynator_compiler_diagnostic_fix.cs0120.enabled = true
+roslynator_compiler_diagnostic_fix.cs0123.enabled = true
+roslynator_compiler_diagnostic_fix.cs0126.enabled = true
+roslynator_compiler_diagnostic_fix.cs0127.enabled = true
+roslynator_compiler_diagnostic_fix.cs0128.enabled = true
+roslynator_compiler_diagnostic_fix.cs0131.enabled = true
+roslynator_compiler_diagnostic_fix.cs0132.enabled = true
+roslynator_compiler_diagnostic_fix.cs0133.enabled = true
+roslynator_compiler_diagnostic_fix.cs0136.enabled = true
+roslynator_compiler_diagnostic_fix.cs0139.enabled = true
+roslynator_compiler_diagnostic_fix.cs0152.enabled = true
+roslynator_compiler_diagnostic_fix.cs0161.enabled = true
+roslynator_compiler_diagnostic_fix.cs0162.enabled = true
+roslynator_compiler_diagnostic_fix.cs0163.enabled = true
+roslynator_compiler_diagnostic_fix.cs0164.enabled = true
+roslynator_compiler_diagnostic_fix.cs0165.enabled = true
+roslynator_compiler_diagnostic_fix.cs0168.enabled = true
+roslynator_compiler_diagnostic_fix.cs0173.enabled = true
+roslynator_compiler_diagnostic_fix.cs0177.enabled = true
+roslynator_compiler_diagnostic_fix.cs0191.enabled = true
+roslynator_compiler_diagnostic_fix.cs0192.enabled = true
+roslynator_compiler_diagnostic_fix.cs0201.enabled = true
+roslynator_compiler_diagnostic_fix.cs0214.enabled = true
+roslynator_compiler_diagnostic_fix.cs0216.enabled = true
+roslynator_compiler_diagnostic_fix.cs0219.enabled = true
+roslynator_compiler_diagnostic_fix.cs0221.enabled = true
+roslynator_compiler_diagnostic_fix.cs0225.enabled = true
+roslynator_compiler_diagnostic_fix.cs0238.enabled = true
+roslynator_compiler_diagnostic_fix.cs0246.enabled = true
+roslynator_compiler_diagnostic_fix.cs0260.enabled = true
+roslynator_compiler_diagnostic_fix.cs0262.enabled = true
+roslynator_compiler_diagnostic_fix.cs0266.enabled = true
+roslynator_compiler_diagnostic_fix.cs0267.enabled = true
+roslynator_compiler_diagnostic_fix.cs0272.enabled = true
+roslynator_compiler_diagnostic_fix.cs0275.enabled = true
+roslynator_compiler_diagnostic_fix.cs0305.enabled = true
+roslynator_compiler_diagnostic_fix.cs0401.enabled = true
+roslynator_compiler_diagnostic_fix.cs0403.enabled = true
+roslynator_compiler_diagnostic_fix.cs0405.enabled = true
+roslynator_compiler_diagnostic_fix.cs0407.enabled = true
+roslynator_compiler_diagnostic_fix.cs0409.enabled = true
+roslynator_compiler_diagnostic_fix.cs0428.enabled = true
+roslynator_compiler_diagnostic_fix.cs0441.enabled = true
+roslynator_compiler_diagnostic_fix.cs0442.enabled = true
+roslynator_compiler_diagnostic_fix.cs0449.enabled = true
+roslynator_compiler_diagnostic_fix.cs0450.enabled = true
+roslynator_compiler_diagnostic_fix.cs0451.enabled = true
+roslynator_compiler_diagnostic_fix.cs0472.enabled = true
+roslynator_compiler_diagnostic_fix.cs0500.enabled = true
+roslynator_compiler_diagnostic_fix.cs0501.enabled = true
+roslynator_compiler_diagnostic_fix.cs0507.enabled = true
+roslynator_compiler_diagnostic_fix.cs0508.enabled = true
+roslynator_compiler_diagnostic_fix.cs0513.enabled = true
+roslynator_compiler_diagnostic_fix.cs0515.enabled = true
+roslynator_compiler_diagnostic_fix.cs0524.enabled = true
+roslynator_compiler_diagnostic_fix.cs0525.enabled = true
+roslynator_compiler_diagnostic_fix.cs0527.enabled = true
+roslynator_compiler_diagnostic_fix.cs0531.enabled = true
+roslynator_compiler_diagnostic_fix.cs0539.enabled = true
+roslynator_compiler_diagnostic_fix.cs0541.enabled = true
+roslynator_compiler_diagnostic_fix.cs0549.enabled = true
+roslynator_compiler_diagnostic_fix.cs0558.enabled = true
+roslynator_compiler_diagnostic_fix.cs0567.enabled = true
+roslynator_compiler_diagnostic_fix.cs0568.enabled = true
+roslynator_compiler_diagnostic_fix.cs0573.enabled = true
+roslynator_compiler_diagnostic_fix.cs0574.enabled = true
+roslynator_compiler_diagnostic_fix.cs0575.enabled = true
+roslynator_compiler_diagnostic_fix.cs0579.enabled = true
+roslynator_compiler_diagnostic_fix.cs0592.enabled = true
+roslynator_compiler_diagnostic_fix.cs0621.enabled = true
+roslynator_compiler_diagnostic_fix.cs0628.enabled = true
+roslynator_compiler_diagnostic_fix.cs0659.enabled = true
+roslynator_compiler_diagnostic_fix.cs0660.enabled = true
+roslynator_compiler_diagnostic_fix.cs0661.enabled = true
+roslynator_compiler_diagnostic_fix.cs0678.enabled = true
+roslynator_compiler_diagnostic_fix.cs0693.enabled = true
+roslynator_compiler_diagnostic_fix.cs0708.enabled = true
+roslynator_compiler_diagnostic_fix.cs0710.enabled = true
+roslynator_compiler_diagnostic_fix.cs0713.enabled = true
+roslynator_compiler_diagnostic_fix.cs0714.enabled = true
+roslynator_compiler_diagnostic_fix.cs0718.enabled = true
+roslynator_compiler_diagnostic_fix.cs0750.enabled = true
+roslynator_compiler_diagnostic_fix.cs0751.enabled = true
+roslynator_compiler_diagnostic_fix.cs0753.enabled = true
+roslynator_compiler_diagnostic_fix.cs0756.enabled = true
+roslynator_compiler_diagnostic_fix.cs0759.enabled = true
+roslynator_compiler_diagnostic_fix.cs0766.enabled = true
+roslynator_compiler_diagnostic_fix.cs0815.enabled = true
+roslynator_compiler_diagnostic_fix.cs0819.enabled = true
+roslynator_compiler_diagnostic_fix.cs0822.enabled = true
+roslynator_compiler_diagnostic_fix.cs1002.enabled = true
+roslynator_compiler_diagnostic_fix.cs1003.enabled = true
+roslynator_compiler_diagnostic_fix.cs1004.enabled = true
+roslynator_compiler_diagnostic_fix.cs1012.enabled = true
+roslynator_compiler_diagnostic_fix.cs1023.enabled = true
+roslynator_compiler_diagnostic_fix.cs1031.enabled = true
+roslynator_compiler_diagnostic_fix.cs1057.enabled = true
+roslynator_compiler_diagnostic_fix.cs1061.enabled = true
+roslynator_compiler_diagnostic_fix.cs1100.enabled = true
+roslynator_compiler_diagnostic_fix.cs1105.enabled = true
+roslynator_compiler_diagnostic_fix.cs1106.enabled = true
+roslynator_compiler_diagnostic_fix.cs1503.enabled = true
+roslynator_compiler_diagnostic_fix.cs1522.enabled = true
+roslynator_compiler_diagnostic_fix.cs1526.enabled = true
+roslynator_compiler_diagnostic_fix.cs1527.enabled = true
+roslynator_compiler_diagnostic_fix.cs1591.enabled = true
+roslynator_compiler_diagnostic_fix.cs1597.enabled = true
+roslynator_compiler_diagnostic_fix.cs1609.enabled = true
+roslynator_compiler_diagnostic_fix.cs1615.enabled = true
+roslynator_compiler_diagnostic_fix.cs1620.enabled = true
+roslynator_compiler_diagnostic_fix.cs1621.enabled = true
+roslynator_compiler_diagnostic_fix.cs1622.enabled = true
+roslynator_compiler_diagnostic_fix.cs1623.enabled = true
+roslynator_compiler_diagnostic_fix.cs1624.enabled = true
+roslynator_compiler_diagnostic_fix.cs1643.enabled = true
+roslynator_compiler_diagnostic_fix.cs1674.enabled = true
+roslynator_compiler_diagnostic_fix.cs1689.enabled = true
+roslynator_compiler_diagnostic_fix.cs1715.enabled = true
+roslynator_compiler_diagnostic_fix.cs1717.enabled = true
+roslynator_compiler_diagnostic_fix.cs1722.enabled = true
+roslynator_compiler_diagnostic_fix.cs1737.enabled = true
+roslynator_compiler_diagnostic_fix.cs1741.enabled = true
+roslynator_compiler_diagnostic_fix.cs1743.enabled = true
+roslynator_compiler_diagnostic_fix.cs1750.enabled = true
+roslynator_compiler_diagnostic_fix.cs1751.enabled = true
+roslynator_compiler_diagnostic_fix.cs1955.enabled = true
+roslynator_compiler_diagnostic_fix.cs1983.enabled = true
+roslynator_compiler_diagnostic_fix.cs1988.enabled = true
+roslynator_compiler_diagnostic_fix.cs1994.enabled = true
+roslynator_compiler_diagnostic_fix.cs1997.enabled = true
+roslynator_compiler_diagnostic_fix.cs3000.enabled = true
+roslynator_compiler_diagnostic_fix.cs3001.enabled = true
+roslynator_compiler_diagnostic_fix.cs3002.enabled = true
+roslynator_compiler_diagnostic_fix.cs3003.enabled = true
+roslynator_compiler_diagnostic_fix.cs3005.enabled = true
+roslynator_compiler_diagnostic_fix.cs3006.enabled = true
+roslynator_compiler_diagnostic_fix.cs3007.enabled = true
+roslynator_compiler_diagnostic_fix.cs3008.enabled = true
+roslynator_compiler_diagnostic_fix.cs3009.enabled = true
+roslynator_compiler_diagnostic_fix.cs3016.enabled = true
+roslynator_compiler_diagnostic_fix.cs3024.enabled = true
+roslynator_compiler_diagnostic_fix.cs3027.enabled = true
+roslynator_compiler_diagnostic_fix.cs7036.enabled = true
+roslynator_compiler_diagnostic_fix.cs8050.enabled = true
+roslynator_compiler_diagnostic_fix.cs8070.enabled = true
+roslynator_compiler_diagnostic_fix.cs8112.enabled = true
+roslynator_compiler_diagnostic_fix.cs8139.enabled = true
+roslynator_compiler_diagnostic_fix.cs8340.enabled = true
+roslynator_compiler_diagnostic_fix.cs8403.enabled = true
+roslynator_compiler_diagnostic_fix.cs8600.enabled = true
+roslynator_compiler_diagnostic_fix.cs8602.enabled = true
+roslynator_compiler_diagnostic_fix.cs8604.enabled = true
+roslynator_compiler_diagnostic_fix.cs8610.enabled = true
+roslynator_compiler_diagnostic_fix.cs8618.enabled = true
+roslynator_compiler_diagnostic_fix.cs8625.enabled = true
+roslynator_compiler_diagnostic_fix.cs8632.enabled = true
+roslynator_compiler_diagnostic_fix.cs8765.enabled = true
+roslynator_compiler_diagnostic_fix.cs8767.enabled = true
