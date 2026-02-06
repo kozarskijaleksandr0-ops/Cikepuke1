@@ -1,22 +1,24 @@
 ﻿using DirectoryService.Domain.PositionsContext.ValueObjects;
 using DirectoryService.Domain.Shared;
+using Domain.LocationsContext.ValueObjects;
 
 namespace DirectoryService.Domain.PositionsContext
 {
     public class Position
     {
         public PositionId Id { get; }
-        public PositionName Name { get; }
+        public PositionName Name { get; set; }
         public PositionDescription Description { get; }
         public bool IsActive { get; }
-        public EntityLifeTime LifeTime { get; }
+        public EntityLifeTime LifeTime { get; set; }
 
         public Position(
             PositionId id,
             PositionName name,
             PositionDescription description,
             bool isActive,
-            EntityLifeTime lifeTime)
+            EntityLifeTime lifeTime
+        )
         {
             Id = id;
             Name = name;
@@ -25,20 +27,14 @@ namespace DirectoryService.Domain.PositionsContext
             LifeTime = lifeTime;
         }
 
-        // Метод для изменения активности
-        public Position ChangeActivity(bool isActive)
+        public void ChangePositionName(PositionName newname)
         {
-            // В реальном проекте здесь создавался бы новый объект с обновленным состоянием
-            // Так как объекты иммутабельны
-            // Для простоты оставим как есть
-            return this;
-        }
-
-        // Метод для обновления описания
-        public Position UpdateDescription(PositionDescription newDescription)
-        {
-            // Аналогично - в реальности создание нового объекта
-            return this;
+            if (LifeTime.IsActive == false)
+            {
+                throw new InvalidOperationException("Сущность удалена");
+            }
+            Name = newname;
+            LifeTime = LifeTime.Update();
         }
     }
 }

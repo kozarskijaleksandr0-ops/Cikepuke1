@@ -1,14 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\\u041A\u041B\u041E\u041D\\123\\Solution1\\",
+  "WorkspaceRootPath": "E:\\\u041A\u043B\u043E\u043D \u0411\u0438\u043B\u043E\u043B\u0430\\123\\Solution1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u043A\u043B\u043E\u043D\\123\\solution1\\domain\\directoryservice.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u043A\u043B\u043E\u043D \u0431\u0438\u043B\u043E\u043B\u0430\\123\\solution1\\domain\\departmentscontext\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\departmentscontext\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u043A\u043B\u043E\u043D \u0431\u0438\u043B\u043E\u043B\u0430\\123\\solution1\\domain\\position\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\position\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u043A\u043B\u043E\u043D \u0431\u0438\u043B\u043E\u043B\u0430\\123\\solution1\\domain\\locationscontext\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\locationscontext\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u043A\u043B\u043E\u043D \u0431\u0438\u043B\u043E\u043B\u0430\\123\\solution1\\domain\\shared\\entitylifetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\shared\\entitylifetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u043A\u043B\u043E\u043D \u0431\u0438\u043B\u043E\u043B\u0430\\123\\solution1\\domain\\locationscontext\\valueobjects\\ianatimezone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\locationscontext\\valueobjects\\ianatimezone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u043A\u043B\u043E\u043D \u0431\u0438\u043B\u043E\u043B\u0430\\123\\solution1\\domain\\directoryservice.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\directoryservice.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041A\u041B\u041E\u041D\\123\\Solution1\\Directory.Build.props||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Directory.Build.props||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u043A\u043B\u043E\u043D \u0431\u0438\u043B\u043E\u043B\u0430\\123\\solution1\\domain\\departmentscontext\\valueobjects\\departmentid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\departmentscontext\\valueobjects\\departmentid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|e:\\\u043A\u043B\u043E\u043D \u0431\u0438\u043B\u043E\u043B\u0430\\123\\solution1\\domain\\departmentscontext\\valueobjects\\departmentdepth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19D2E1CD-7E3D-42D3-961E-9BD9CC36B1B3}|Domain\\DirectoryService.Domain.csproj|solutionrelative:domain\\departmentscontext\\valueobjects\\departmentdepth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,33 +45,111 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "location.cs",
+              "DocumentMoniker": "E:\\\u041A\u043B\u043E\u043D \u0411\u0438\u043B\u043E\u043B\u0430\\123\\Solution1\\Domain\\LocationsContext\\location.cs",
+              "RelativeDocumentMoniker": "Domain\\LocationsContext\\location.cs",
+              "ToolTip": "E:\\\u041A\u043B\u043E\u043D \u0411\u0438\u043B\u043E\u043B\u0430\\123\\Solution1\\Domain\\LocationsContext\\location.cs",
+              "RelativeToolTip": "Domain\\LocationsContext\\location.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T03:04:01.736Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DirectoryService.Domain",
-              "DocumentMoniker": "E:\\\u041A\u041B\u041E\u041D\\123\\Solution1\\Domain\\DirectoryService.Domain.csproj",
-              "RelativeDocumentMoniker": "Domain\\DirectoryService.Domain.csproj",
-              "ToolTip": "E:\\\u041A\u041B\u041E\u041D\\123\\Solution1\\Domain\\DirectoryService.Domain.csproj",
-              "RelativeToolTip": "Domain\\DirectoryService.Domain.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-02-03T02:21:48.521Z",
+              "Title": "Department.cs",
+              "DocumentMoniker": "E:\\\u041A\u043B\u043E\u043D \u0411\u0438\u043B\u043E\u043B\u0430\\123\\Solution1\\Domain\\DepartmentsContext\\Department.cs",
+              "RelativeDocumentMoniker": "Domain\\DepartmentsContext\\Department.cs",
+              "ToolTip": "E:\\\u041A\u043B\u043E\u043D \u0411\u0438\u043B\u043E\u043B\u0430\\123\\Solution1\\Domain\\DepartmentsContext\\Department.cs",
+              "RelativeToolTip": "Domain\\DepartmentsContext\\Department.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAADwv34AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T06:14:07.429Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Directory.Build.props",
-              "DocumentMoniker": "E:\\\u041A\u041B\u041E\u041D\\123\\Solution1\\Directory.Build.props",
-              "RelativeDocumentMoniker": "Directory.Build.props",
-              "ToolTip": "E:\\\u041A\u041B\u041E\u041D\\123\\Solution1\\Directory.Build.props",
-              "RelativeToolTip": "Directory.Build.props",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-02-03T02:15:17.06Z",
+              "Title": "Position.cs",
+              "DocumentMoniker": "E:\\\u041A\u043B\u043E\u043D \u0411\u0438\u043B\u043E\u043B\u0430\\123\\Solution1\\Domain\\Position\\Position.cs",
+              "RelativeDocumentMoniker": "Domain\\Position\\Position.cs",
+              "ToolTip": "E:\\\u041A\u043B\u043E\u043D \u0411\u0438\u043B\u043E\u043B\u0430\\123\\Solution1\\Domain\\Position\\Position.cs",
+              "RelativeToolTip": "Domain\\Position\\Position.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAmwCQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T06:04:52.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EntityLifeTime.cs",
+              "DocumentMoniker": "E:\\\u041A\u043B\u043E\u043D \u0411\u0438\u043B\u043E\u043B\u0430\\123\\Solution1\\Domain\\Shared\\EntityLifeTime.cs",
+              "RelativeDocumentMoniker": "Domain\\Shared\\EntityLifeTime.cs",
+              "ToolTip": "E:\\\u041A\u043B\u043E\u043D \u0411\u0438\u043B\u043E\u043B\u0430\\123\\Solution1\\Domain\\Shared\\EntityLifeTime.cs",
+              "RelativeToolTip": "Domain\\Shared\\EntityLifeTime.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAACQAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T03:19:37.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IanaTimeZone.cs",
+              "DocumentMoniker": "E:\\\u041A\u043B\u043E\u043D \u0411\u0438\u043B\u043E\u043B\u0430\\123\\Solution1\\Domain\\LocationsContext\\ValueObjects\\IanaTimeZone.cs",
+              "RelativeDocumentMoniker": "Domain\\LocationsContext\\ValueObjects\\IanaTimeZone.cs",
+              "ToolTip": "E:\\\u041A\u043B\u043E\u043D \u0411\u0438\u043B\u043E\u043B\u0430\\123\\Solution1\\Domain\\LocationsContext\\ValueObjects\\IanaTimeZone.cs",
+              "RelativeToolTip": "Domain\\LocationsContext\\ValueObjects\\IanaTimeZone.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwC0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T03:04:19.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DirectoryService.Domain.csproj",
+              "DocumentMoniker": "E:\\\u041A\u043B\u043E\u043D \u0411\u0438\u043B\u043E\u043B\u0430\\123\\Solution1\\Domain\\DirectoryService.Domain.csproj",
+              "RelativeDocumentMoniker": "Domain\\DirectoryService.Domain.csproj",
+              "ToolTip": "E:\\\u041A\u043B\u043E\u043D \u0411\u0438\u043B\u043E\u043B\u0430\\123\\Solution1\\Domain\\DirectoryService.Domain.csproj",
+              "RelativeToolTip": "Domain\\DirectoryService.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-03T02:25:33.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DepartmentId.cs",
+              "DocumentMoniker": "E:\\\u041A\u043B\u043E\u043D \u0411\u0438\u043B\u043E\u043B\u0430\\123\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentId.cs",
+              "RelativeDocumentMoniker": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentId.cs",
+              "ToolTip": "E:\\\u041A\u043B\u043E\u043D \u0411\u0438\u043B\u043E\u043B\u0430\\123\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentId.cs",
+              "RelativeToolTip": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentId.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T03:04:19.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DepartmentDepth.cs",
+              "DocumentMoniker": "E:\\\u041A\u043B\u043E\u043D \u0411\u0438\u043B\u043E\u043B\u0430\\123\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentDepth.cs",
+              "RelativeDocumentMoniker": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentDepth.cs",
+              "ToolTip": "E:\\\u041A\u043B\u043E\u043D \u0411\u0438\u043B\u043E\u043B\u0430\\123\\Solution1\\Domain\\DepartmentsContext\\ValueObjects\\DepartmentDepth.cs",
+              "RelativeToolTip": "Domain\\DepartmentsContext\\ValueObjects\\DepartmentDepth.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T02:37:09.118Z",
               "EditorCaption": ""
             }
           ]
