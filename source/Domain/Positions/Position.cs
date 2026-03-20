@@ -7,7 +7,7 @@ namespace DirectoryService.Domain.Positions
 	{
 		public PositionId Id { get; }
 		public PositionName Name { get; set; }
-		public PositionDescription Description { get; }
+		public PositionDescription Description { get; set; }
 		public bool IsActive { get; }
 		public EntityLifeTime LifeTime { get; set; }
 
@@ -15,19 +15,17 @@ namespace DirectoryService.Domain.Positions
 			PositionId id,
 			PositionName name,
 			PositionDescription description,
-			bool isActive,
 			EntityLifeTime lifeTime
 		)
 		{
 			Id = id;
 			Name = name;
-			Description = description;
-			IsActive = isActive;
+			Description = description;			
 			LifeTime = lifeTime;
 		}
 
 		public void ChangePositionName(PositionName newname)
-		{
+		{ 
 			if (!LifeTime.IsActive)
 			{
 				throw new InvalidOperationException("Сущность удалена");
@@ -35,5 +33,24 @@ namespace DirectoryService.Domain.Positions
 			Name = newname;
 			LifeTime = LifeTime.Update();
 		}
+		  public void ChangeDescription(PositionDescription newDescription)
+    {
+        if (!LifeTime.IsActive)
+    {
+        throw new InvalidOperationException("Нельзя изменить удаленную должность");
+    }
+
+    Description = newDescription;
+    }
+
+    public void Delete()
+    {
+        if (!LifeTime.IsActive)
+            {
+                throw new InvalidOperationException("Должность уже удалена");
+            }
+
+            LifeTime = EntityLifeTime.Create(LifeTime.CreatedAt, DateTime.UtcNow);
+    }
 	}
 }

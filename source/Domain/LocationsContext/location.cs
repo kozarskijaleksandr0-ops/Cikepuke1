@@ -6,8 +6,8 @@ namespace DirectoryService.Domain.LocationsContext
 	public class Location
 	{
 		public LocationId Id { get; }
-		public LocationName Name { get; }
-		public LocationAddress Address { get; }
+		public LocationName Name { get; set; }
+		public LocationAddress Address { get; set;}
 		public IanaTimeZone TimeZone { get; set; }
 		public EntityLifeTime LifeTime { get; set; }
 
@@ -36,5 +36,36 @@ namespace DirectoryService.Domain.LocationsContext
 			TimeZone = newname;
 			LifeTime = LifeTime.Update();
 		}
+
+		public void ChangeName(LocationName newName)
+		{
+			if (!LifeTime.IsActive)
+			{
+				throw new InvalidOperationException("Сущность удалена");
+			}
+
+			Name = newName;
+			LifeTime = LifeTime.Update();
+		}
+
+		public void  ChangeAddress(LocationAddress newAddress)
+		{
+			if (!LifeTime.IsActive)
+			{
+				throw new InvalidOperationException("Сущность удалена");
+			}
+			
+			Address = newAddress;
+			LifeTime = LifeTime.Update();
 	}
-}
+	    public void Delete()
+    {
+        if (!LifeTime.IsActive)
+            {
+                throw new InvalidOperationException("Локация уже удалена");
+            }
+
+            LifeTime = EntityLifeTime.Create(LifeTime.CreatedAt, DateTime.UtcNow);
+	
+ }
+}}

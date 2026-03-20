@@ -31,10 +31,9 @@
 			short depth = path.CalculateDepth();
 			return Create(depth);
 		}
-
-		public DepartmentDepth Increment()
+		public static DepartmentDepth Root()
 		{
-			return Create((short)(Value + 1));
+			return Create(1);
 		}
 	}
 }

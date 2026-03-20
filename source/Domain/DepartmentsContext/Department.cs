@@ -16,8 +16,50 @@ namespace DirectoryService.Domain.DepartmentsContext
 		public bool IsActive { get; }
 		public EntityLifeTime LifeTime { get; set; }
 
-		// Фабричный метод для создания корневого подразделения
-		public static Department CreateRoot(DepartmentName name, DepartmentIdentifier identifier, bool isActive = true)
+		private readonly List<DepartmentPosition> _departmentPositions = [];
+		private readonly List<Department> departments = [];
+		private readonly List<DepartmentLocation> _departmentLocations = [];
+
+		public Department(
+			DepartmentId id,
+			DepartmentName name,
+			DepartmentIdentifier identifier,
+			DepartmentId? parentId,
+			DepartmentPath path,
+			DepartmentDepth depth,
+			bool isActive,
+			EntityLifeTime lifeTime
+		)
+		{
+			Id = id;
+			Name = name;
+			Identifier = identifier;
+			ParentId = parentId;
+			Path = path;
+			Depth = depth;
+			IsActive = isActive;
+			LifeTime = lifeTime;
+		}
+
+		public Department(
+			DepartmentId id,
+			DepartmentName name,
+			DepartmentIdentifier identifier,
+			EntityLifeTime lifeTime
+		)
+		{
+			Id = id;
+			ParentId = null;
+			Name = name;
+			Identifier = identifier;
+			LifeTime = lifeTime;
+			Depth = DepartmentDepth.Root();
+			Path = DepartmentPath.Create(identifier.Value);
+		}
+
+
+        // Фабричный метод для создания корневого подразделения
+        public static Department CreateRoot(DepartmentName name, DepartmentIdentifier identifier, bool isActive = true)
 		{
 			DepartmentId id = DepartmentId.Create();
 			DepartmentPath path = DepartmentPath.CreateForRoot(identifier.Value);
@@ -43,40 +85,7 @@ namespace DirectoryService.Domain.DepartmentsContext
 			return new Department(id, name, identifier, parent.Id, path, depth, isActive, lifeTime);
 		}
 
-		// Закрытый конструктор
-		private Department(
-			DepartmentId id,
-			DepartmentName name,
-			DepartmentIdentifier identifier,
-			DepartmentId? parentId,
-			DepartmentPath path,
-			DepartmentDepth depth,
-			bool isActive,
-			EntityLifeTime lifeTime
-		)
-		{
-			Id = id;
-			Name = name;
-			Identifier = identifier;
-			ParentId = parentId;
-			Path = path;
-			Depth = depth;
-			IsActive = isActive;
-			LifeTime = lifeTime;
-		}
-
-		// Метод для изменения активности
-		public Department ChangeActivity(bool isActive)
-		{
-			EntityLifeTime updatedLifeTime = EntityLifeTime.Create(
-				createdAt: LifeTime.CreatedAt,
-				updatedAt: DateTime.UtcNow,
-				isActive: isActive
-			);
-
-			return new Department(Id, Name, Identifier, ParentId, Path, Depth, isActive, updatedLifeTime);
-		}
-
+	
 		// Метод для проверки, является ли подразделение корневым
 		public bool IsRoot()
 		{
@@ -94,45 +103,31 @@ namespace DirectoryService.Domain.DepartmentsContext
 			return Path.Value.StartsWith(parent.Path.Value + ".", StringComparison.InvariantCultureIgnoreCase);
 		}
 
-		private readonly List<Position> positions = [];
-
-		public void AddPosition(Position position)
+		// Метод для добавления дочернего подразделения
+		public void AddChild(Department child)
 		{
-			foreach (Position p in positions)
-			{
-				if (p.Name == position.Name)
-				{
-					throw new ArgumentException("Внтури подразделения уже есть такая должность");
-				}
-			}
+			ArgumentNullException.ThrowIfNull(child);
 
-			positions.Add(position);
-
-			LifeTime = LifeTime.Update();
+        if (IsChildOf(child) || child == this)	
+        {
+        throw new InvalidOperationException("Подразделение не может быть дочерним.");
+        }
+    
+        if (child.ParentId != null && child.ParentId != this.Id)
+        {
+        throw new InvalidOperationException("Подразделение уже имеет родителя.");
+        }
+    
+       departments.Add(child);
 		}
-
-		private readonly List<Location> offices = [];
-
-		public void Addoffice(Location office)
+		
+		public void AddLocation(Location location)
 		{
-			foreach (Location l in offices)
+			if (_departmentLocations.Any(l=>l.LocationId == location.Id))
 			{
-				if (l.Name == office.Name)
-				{
-					throw new ArgumentException("Уже есть такое название");
-				}
-				if (l.Address == office.Address)
-				{
-					throw new ArgumentException("Есть уже с таким адресом");
-				}
-				if (l.Id == office.Id)
-				{
-					throw new ArgumentException("Такой оффис уже есть");
-				}
+				throw new InvalidOperationException("Локация уже присутствует в подразделении.");
 			}
-			offices.Add(office);
-
-			LifeTime = LifeTime.Update();
+			_departmentLocations.Add(new DepartmentLocation(Id,location.Id,location,this));
 		}
 	}
 }

@@ -60,5 +60,16 @@
 			int lastDotIndex = Value.LastIndexOf('.');
 			return lastDotIndex > 0 ? Value[..lastDotIndex] : string.Empty;
 		}
+		public static DepartmentPath CreateForChild(Department parent, DepartmentIdentifier childIdentifier)
+		{
+			string parentPath = parent.Path.Value;
+			string childPath = childIdentifier.Value;
+			string newPath = parentPath + '/' + childPath;
+			return new DepartmentPath(newPath);
+		}
+		public static DepartmentPath CreateForChild(Department parent, Department child)
+		{
+			return CreateForChild(parent, child.Identifier);
+		}
 	}
 }

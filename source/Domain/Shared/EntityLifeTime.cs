@@ -39,5 +39,10 @@
 			EntityLifeTime time = new EntityLifeTime(CreatedAt, now, IsActive);
 			return time;
 		}
-	}
+
+        internal static EntityLifeTime Create(DateTime createdAt, object value)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
