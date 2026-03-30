@@ -3,16 +3,24 @@ using DirectoryService.Domain.LocationsContext.ValueObjects;
 using DirectoryService.Domain.Positions;
 using DirectoryService.Domain.Positions.ValueObjects;
 using DirectoryService.Domain.Shared;
+using Infrastructure.PostgreSQL;
 using Microsoft.AspNetCore.Mvc;
 using WebApi2;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
 WebApplication app = builder.Build();
+
+using (IServiceScope scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    
+}
 
 LocationStorage.InitializeStorage();
 PositionStorage.InitializeStorage();

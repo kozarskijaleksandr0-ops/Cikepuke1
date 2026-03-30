@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="Domain/DirectoryService.Domain.csproj" Id="19d2e1cd-7e3d-42d3-961e-9bd9cc36b1b3" />
+  <Project Path="Infrastructure.PostgreSQL/Infrastructure.PostgreSQL.csproj" />
   <Project Path="Solution-Test/Solution-Test.csproj" Id="ead70115-db73-4b3d-a9cb-a4d944de7d8c" />
   <Project Path="WebApi2/WebApi2.csproj" />
 </Solution>

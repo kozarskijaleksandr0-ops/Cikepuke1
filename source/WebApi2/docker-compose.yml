@@ -1,0 +1,16 @@
+services:
+  database:
+    image: postgres:16.13-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: solution1_db
+      PGPORT: 5555
+    ports:
+      - "5655:5555"
+    volumes:
+      - solution1_db_data:/var/lib/postgresql
+    restart: always
+
+volumes:
+  solution1_db_data:
