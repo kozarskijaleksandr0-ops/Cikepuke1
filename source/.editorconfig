@@ -15,6 +15,9 @@ roslynator_body_style = block
 dotnet_diagnostic.rcs1224.severity = suggestion
 dotnet_diagnostic.rcs1225.severity = suggestion
 dotnet_diagnostic.rcs9001.severity = suggestion
+dotnet_diagnostic.CS0718.severity = none
+dotnet_diagnostic.CS9003.severity = none
+dotnet_diagnostic.IDE0039.severity = none
 
 # Remove unnecessary 'else'
 dotnet_diagnostic.rcs1211.severity = suggestion
@@ -22,10 +25,14 @@ dotnet_diagnostic.rcs1211.severity = suggestion
 is_global = true
 roslynator_analyzers.enabled_by_default = true
 
+dotnet_diagnostic.CA1851.severity = none
 dotnet_diagnostic.RCS1001.severity = none
 dotnet_diagnostic.RCS1041.severity = error
 dotnet_diagnostic.RCS1202.severity = warning
 
+dotnet_diagnostic.CA1308.severity = none
+
+dotnet_diagnostic.ASP0023.severity = none 
 dotnet_diagnostic.IDE0058.severity = none
 dotnet_diagnostic.IDE0160.severity = none
 dotnet_diagnostic.IDE0290.severity = none
@@ -41,6 +48,7 @@ dotnet_diagnostic.CA2224.severity = error
 dotnet_diagnostic.CA2227.severity = error
 dotnet_diagnostic.CA2251.severity = error
 
+dotnet_diagnostic.IDE0300.severity = suggestion
 dotnet_diagnostic.IDE0305.severity = suggestion
 dotnet_diagnostic.IDE0046.severity = suggestion
 dotnet_diagnostic.IDE0002.severity = suggestion
@@ -66,6 +74,7 @@ dotnet_diagnostic.IDE0270.severity = suggestion
 dotnet_diagnostic.IDE0280.severity = suggestion
 dotnet_diagnostic.IDE0075.severity = suggestion
 dotnet_diagnostic.IDE0078.severity = suggestion
+dotnet_diagnostic.IDE0100.severity = none
 
 dotnet_diagnostic.IDE0350.severity = error
 dotnet_diagnostic.IDE0260.severity = error
@@ -82,7 +91,7 @@ dotnet_diagnostic.IDE0022.severity = error
 dotnet_diagnostic.IDE0019.severity = error
 dotnet_diagnostic.IDE0008.severity = error
 
-
+dotnet_diagnostic.CA1849.severity = suggestion
 dotnet_diagnostic.CA2026.severity = error
 dotnet_diagnostic.CA2025.severity = error
 dotnet_diagnostic.CA2021.severity = error
@@ -175,10 +184,11 @@ dotnet_diagnostic.CA1008.severity = error
 dotnet_diagnostic.CA1010.severity = error
 dotnet_diagnostic.CA1012.severity = error
 dotnet_diagnostic.CA1018.severity = error
-dotnet_diagnostic.CA1024.severity = error
+dotnet_diagnostic.CA1024.severity = none
 dotnet_diagnostic.CA1062.severity = none
 dotnet_diagnostic.CA1056.severity = none
 dotnet_diagnostic.CA1305.severity = none
+dotnet_diagnostic.CA1303.severity = none
 dotnet_diagnostic.CA1711.severity = none
 dotnet_diagnostic.CA1708.severity = none
 dotnet_diagnostic.CA1054.severity = none
@@ -492,7 +502,6 @@ roslynator_compiler_diagnostic_fix.cs0708.enabled = true
 roslynator_compiler_diagnostic_fix.cs0710.enabled = true
 roslynator_compiler_diagnostic_fix.cs0713.enabled = true
 roslynator_compiler_diagnostic_fix.cs0714.enabled = true
-roslynator_compiler_diagnostic_fix.cs0718.enabled = true
 roslynator_compiler_diagnostic_fix.cs0750.enabled = true
 roslynator_compiler_diagnostic_fix.cs0751.enabled = true
 roslynator_compiler_diagnostic_fix.cs0753.enabled = true

@@ -1,142 +1,133 @@
 ﻿using DirectoryService.Domain.DepartmentsContext.ValueObjects;
-using DirectoryService.Domain.PositionsContext;
+using DirectoryService.Domain.LocationsContext;
+using DirectoryService.Domain.Positions;
 using DirectoryService.Domain.Shared;
-using Domain.Location;
 
 namespace DirectoryService.Domain.DepartmentsContext
 {
-    public class Department
-    {
-        public DepartmentId Id { get; }
-        public DepartmentName Name { get; }
-        public DepartmentIdentifier Identifier { get; }
-        public DepartmentId? ParentId { get; }
-        public DepartmentPath Path { get; }
-        public DepartmentDepth Depth { get; }
-        public bool IsActive { get; }
-        public EntityLifeTime LifeTime { get; set; }
+	public class Department
+	{
+		public DepartmentId Id { get; }
+		public DepartmentName Name { get; }
+		public DepartmentIdentifier Identifier { get; }
+		public DepartmentId? ParentId { get; }
+		public DepartmentPath Path { get; }
+		public DepartmentDepth Depth { get; }
+		public bool IsActive { get; }
+		public EntityLifeTime LifeTime { get; set; }
+
+		private readonly List<DepartmentPosition> _departmentPositions = [];
+		private readonly List<Department> departments = [];
+		private readonly List<DepartmentLocation> _departmentLocations = [];
+
+		public Department(
+			DepartmentId id,
+			DepartmentName name,
+			DepartmentIdentifier identifier,
+			DepartmentId? parentId,
+			DepartmentPath path,
+			DepartmentDepth depth,
+			bool isActive,
+			EntityLifeTime lifeTime
+		)
+		{
+			Id = id;
+			Name = name;
+			Identifier = identifier;
+			ParentId = parentId;
+			Path = path;
+			Depth = depth;
+			IsActive = isActive;
+			LifeTime = lifeTime;
+		}
+
+		public Department(
+			DepartmentId id,
+			DepartmentName name,
+			DepartmentIdentifier identifier,
+			EntityLifeTime lifeTime
+		)
+		{
+			Id = id;
+			ParentId = null;
+			Name = name;
+			Identifier = identifier;
+			LifeTime = lifeTime;
+			Depth = DepartmentDepth.Root();
+			Path = DepartmentPath.Create(identifier.Value);
+		}
+
 
         // Фабричный метод для создания корневого подразделения
-        public static Department CreateRoot(
-            DepartmentName name,
-            DepartmentIdentifier identifier,
-            bool isActive = true
-        )
+        public static Department CreateRoot(DepartmentName name, DepartmentIdentifier identifier, bool isActive = true)
+		{
+			DepartmentId id = DepartmentId.Create();
+			DepartmentPath path = DepartmentPath.CreateForRoot(identifier.Value);
+			DepartmentDepth depth = DepartmentDepth.CalculateFromPath(path);
+			EntityLifeTime lifeTime = EntityLifeTime.Create(createdAt: DateTime.UtcNow, updatedAt: DateTime.UtcNow);
+
+			return new Department(id, name, identifier, null, path, depth, isActive, lifeTime);
+		}
+
+		// Фабричный метод для создания дочернего подразделения
+		public static Department CreateChild(
+			DepartmentName name,
+			DepartmentIdentifier identifier,
+			Department parent,
+			bool isActive = true
+		)
+		{
+			DepartmentId id = DepartmentId.Create();
+			DepartmentPath path = DepartmentPath.CreateForChild(parent.Path, identifier.Value);
+			DepartmentDepth depth = DepartmentDepth.CalculateFromPath(path);
+			EntityLifeTime lifeTime = EntityLifeTime.Create(createdAt: DateTime.UtcNow, updatedAt: DateTime.UtcNow);
+
+			return new Department(id, name, identifier, parent.Id, path, depth, isActive, lifeTime);
+		}
+
+	
+		// Метод для проверки, является ли подразделение корневым
+		public bool IsRoot()
+		{
+			return ParentId == null;
+		}
+
+		// Метод для проверки, является ли подразделение дочерним относительно другого
+		public bool IsChildOf(Department parent)
+		{
+			if (parent == null)
+			{
+				return false;
+			}
+
+			return Path.Value.StartsWith(parent.Path.Value + ".", StringComparison.InvariantCultureIgnoreCase);
+		}
+
+		// Метод для добавления дочернего подразделения
+		public void AddChild(Department child)
+		{
+			ArgumentNullException.ThrowIfNull(child);
+
+        if (IsChildOf(child) || child == this)	
         {
-            var id = DepartmentId.Create();
-            var path = DepartmentPath.CreateForRoot(identifier.Value);
-            var depth = DepartmentDepth.CalculateFromPath(path);
-            var lifeTime = EntityLifeTime.Create(
-                createdAt: DateTime.UtcNow,
-                updatedAt: DateTime.UtcNow
-            );
-
-            return new Department(id, name, identifier, null, path, depth, isActive, lifeTime);
+        throw new InvalidOperationException("Подразделение не может быть дочерним.");
         }
-
-        // Фабричный метод для создания дочернего подразделения
-        public static Department CreateChild(
-            DepartmentName name,
-            DepartmentIdentifier identifier,
-            Department parent,
-            bool isActive = true
-        )
+    
+        if (child.ParentId != null && child.ParentId != this.Id)
         {
-            var id = DepartmentId.Create();
-            var path = DepartmentPath.CreateForChild(parent.Path, identifier.Value);
-            var depth = DepartmentDepth.CalculateFromPath(path);
-            var lifeTime = EntityLifeTime.Create(
-                createdAt: DateTime.UtcNow,
-                updatedAt: DateTime.UtcNow
-            );
-
-            return new Department(id, name, identifier, parent.Id, path, depth, isActive, lifeTime);
+        throw new InvalidOperationException("Подразделение уже имеет родителя.");
         }
-
-        // Закрытый конструктор
-        private Department(
-            DepartmentId id,
-            DepartmentName name,
-            DepartmentIdentifier identifier,
-            DepartmentId? parentId,
-            DepartmentPath path,
-            DepartmentDepth depth,
-            bool isActive,
-            EntityLifeTime lifeTime
-        )
-        {
-            Id = id;
-            Name = name;
-            Identifier = identifier;
-            ParentId = parentId;
-            Path = path;
-            Depth = depth;
-            IsActive = isActive;
-            LifeTime = lifeTime;
-        }
-
-        // Метод для изменения активности
-        public Department ChangeActivity(bool isActive)
-        {
-            var updatedLifeTime = EntityLifeTime.Create(
-                createdAt: LifeTime.CreatedAt,
-                updatedAt: DateTime.UtcNow,
-                isActive: isActive
-            );
-
-            return new Department(
-                Id,
-                Name,
-                Identifier,
-                ParentId,
-                Path,
-                Depth,
-                isActive,
-                updatedLifeTime
-            );
-        }
-
-        // Метод для проверки, является ли подразделение корневым
-        public bool IsRoot() => ParentId == null;
-
-        // Метод для проверки, является ли подразделение дочерним относительно другого
-        public bool IsChildOf(Department parent)
-        {
-            if (parent == null)
-                return false;
-            return Path.Value.StartsWith(parent.Path.Value + ".");
-        }
-
-        private readonly List<Position> positions = [];
-
-        public void AddPosition(Position position)
-        {
-            foreach (Position p in positions)
-            {
-                if (p.Name == position.Name)
-                    throw new ArgumentException("Внтури подразделения уже есть такая должность");
-            }
-            positions.Add(position);
-
-            LifeTime = LifeTime.Update();
-        }
-
-        private readonly List<Location> offices = [];
-
-        public void Addoffice(Location office)
-        {
-            foreach (Location l in offices)
-            {
-                if (l.Name == office.Name)
-                    throw new ArgumentException("Уже есть такое название");
-                if (l.Address == office.Address)
-                    throw new ArgumentException("Есть уже с таким адресом");
-                if (l.Id == office.Id)
-                    throw new ArgumentException("Такой оффис уже есть");
-            }
-            offices.Add(office);
-
-            LifeTime = LifeTime.Update();
-        }
-    }
+    
+       departments.Add(child);
+		}
+		
+		public void AddLocation(Location location)
+		{
+			if (_departmentLocations.Any(l=>l.LocationId == location.Id))
+			{
+				throw new InvalidOperationException("Локация уже присутствует в подразделении.");
+			}
+			_departmentLocations.Add(new DepartmentLocation(Id,location.Id,location,this));
+		}
+	}
 }
