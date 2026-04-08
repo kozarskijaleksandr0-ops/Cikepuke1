@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using DirectoryService.Domain.Positions;
 using DirectoryService.Domain.Positions.ValueObjects;
 using DirectoryService.Domain.Shared;
+using DirectoryService.Application.CreatePosition;
 
 namespace WebApi2;
 
@@ -47,55 +48,11 @@ public class PositionController : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult Create([FromBody] CreatePositionRequest request)
+    public async Task <IActionResult> Create([FromBody] CreatePositionRequest request, [FromServices] CreatePositionHandler handler, CancellationToken ct = default)
     {
-        DateTime Date = DateTime.UtcNow;
-        try
-        {
-            if (request == null)
-            {
-
-                return BadRequest("Тело запроса не может быть пустым");
-            }
-
-
-            if (string.IsNullOrWhiteSpace(request.Name))
-            {
-
-                return BadRequest("Название не может быть пустым");
-            }
-
-
-            if (string.IsNullOrWhiteSpace(request.Description))
-            {
-
-                return BadRequest("Описание не может быть пустым");
-            }
-
-
-            PositionId positionId = PositionId.Create(Guid.NewGuid());
-            PositionName name = PositionName.Create(request.Name);
-            PositionDescription description = PositionDescription.Create(request.Description);
-            EntityLifeTime lifeTime = EntityLifeTime.Create(Date, Date);
-
-            Position position = new Position(positionId, name, description, lifeTime);
-            
-            PositionStorage.Add(position);
-            
-            return CreatedAtAction(nameof(GetById), new { id = positionId.Value }, position);
-        }
-        catch (ArgumentException ex)
-        {
-            return BadRequest($"Ошибка в формате данных: {ex.Message}");
-        }
-        catch (InvalidOperationException ex)
-        {
-            return Conflict($"Конфликт при добавлении: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            return Problem($"Внутренняя ошибка сервера: {ex.Message}");
-        }
+        var command = new CreatePositionCommand(request.Name, request.Description);
+         Guid result = await handler.Handle(command, ct);
+         return Ok(result);
     }
 
     [HttpPatch("{id:guid}")]
