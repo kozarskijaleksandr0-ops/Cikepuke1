@@ -61,6 +61,9 @@ public sealed class CreateLocationHandler
         await _repository.Add(location, ct);
 
         return locationId.Value;
+        
+        
     }
+    
 }
 

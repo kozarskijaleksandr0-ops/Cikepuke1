@@ -1,5 +1,6 @@
 using DirectoryService.Domain.LocationsContext;
 using DirectoryService.Domain.LocationsContext.ValueObjects;
+using Microsoft.EntityFrameworkCore;
 namespace Infrastructure.PostgreSQL;
 
 public interface ILocationRepository
@@ -10,5 +11,5 @@ public interface ILocationRepository
     Task Update(Location location, CancellationToken ct = default);
     Task Delete(LocationId id, CancellationToken ct = default);
     Task<IEnumerable<Location>> GetAll(CancellationToken ct = default);
-}
 
+}    

@@ -164,4 +164,35 @@ public class PositionController : ControllerBase
             return Problem($"Внутренняя ошибка сервера: {ex.Message}");
         }
     }
+     [HttpPut("{id:guid}")]
+    public async Task<IResult> Rename(
+        [FromRoute] Guid id,
+        [FromBody] RenamePositionCommand request,
+        [FromServices] RenamePositionHandler handler,
+        CancellationToken ct)
+    {
+        try
+        {
+            var command = new RenamePositionCommand
+            {
+                Id = id,
+                NewName = request.NewName
+            };
+
+            var result = await handler.Handle(command, ct);
+            return Results.Ok(result);
+        }
+        catch (ArgumentException ex)
+        {
+            return Results.BadRequest(ex.Message);
+        }
+        catch (InvalidOperationException ex)
+        {
+            return Results.Conflict(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem($"Внутренняя ошибка: {ex.Message}");
+        }
+    }
 }

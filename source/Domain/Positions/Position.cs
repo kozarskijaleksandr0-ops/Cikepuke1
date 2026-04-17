@@ -53,4 +53,5 @@ namespace DirectoryService.Domain.Positions
             LifeTime = EntityLifeTime.Create(LifeTime.CreatedAt, DateTime.UtcNow);
     }
 	}
+	
 }

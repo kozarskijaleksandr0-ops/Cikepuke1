@@ -81,15 +81,15 @@ public class LocationController : ControllerBase
             }
 
 
-            if (!string.IsNullOrWhiteSpace(request.Name))
+            if (!string.IsNullOrWhiteSpace(request.NewName))
             {
-                existingLocation.ChangeName(LocationName.Create(request.Name));
+                existingLocation.ChangeName(LocationName.Create(request.NewName));
             }
 
 
-            if (!string.IsNullOrWhiteSpace(request.Address))
+            if (!string.IsNullOrWhiteSpace(request.NewAddress))
             {
-                existingLocation.ChangeAddress(LocationAddress.Create(request.Address));
+                existingLocation.ChangeAddress(LocationAddress.Create(request.NewAddress));
             }
 
 
@@ -181,4 +181,43 @@ public class LocationController : ControllerBase
             return Problem($"Внутренняя ошибка сервера: {ex.Message}");
         }
     }
+
+     [HttpPut("{id:guid}")]
+    public async Task<IResult> Update(
+        [FromRoute] Guid id,
+        [FromBody] UpdateLocationRequest request,
+        [FromServices] UpdateLocationHandler handler,
+        CancellationToken ct)
+    {
+        try
+        {
+            var command = new UpdateLocationCommand
+            {
+                Id = id,
+                NewName = request.NewName,
+                NewAddress = request.NewAddress
+            };
+
+            var result = await handler.Handle(command, ct);
+            return Results.Ok(result);
+        }
+        catch (ArgumentException ex)
+        {
+            return Results.BadRequest(ex.Message);
+        }
+        catch (InvalidOperationException ex)
+        {
+            return Results.Conflict(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem($"Внутренняя ошибка: {ex.Message}");
+        }
+    }
+    public record UpdateLocationRequest
+{
+    public string? NewName { get; set; }
+    public string? NewAddress { get; set; }
+    public string? TimeZone { get; set; }
+}
 }

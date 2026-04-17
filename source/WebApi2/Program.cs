@@ -19,6 +19,8 @@ builder.Services.AddScoped<LocationRepository, LocationRepository>();
 builder.Services.AddScoped<CreatePositionHandler>();
 builder.Services.AddScoped<CreateLocationHandler>();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddScoped<DirectoryService.Application.CreatePosition.RenamePositionHandler>();    
+builder.Services.AddScoped<DirectoryService.Application.CreateLocation.UpdateLocationHandler>();
 
 
 WebApplication app = builder.Build();
