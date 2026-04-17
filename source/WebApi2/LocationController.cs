@@ -4,6 +4,7 @@ using DirectoryService.Domain.LocationsContext.ValueObjects;
 using WebApi2;
 using DirectoryService.Domain.Shared;
 using static WebApi2.LocationStorage;
+using DirectoryService.Application.CreateLocation;
 
 
 namespace WebApi2;
@@ -50,62 +51,12 @@ public class LocationController : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult Create([FromBody] CreateLocationRequest request)
+    public async Task <IActionResult> Create([FromBody] CreateLocationRequest request,[FromServices] CreateLocationHandler handler, CancellationToken ct = default)
     {
-        DateTime Date = DateTime.UtcNow;
-        try
-        {
-            if (request == null)
-            {
-
-                return BadRequest("Тело запроса не может быть пустым");
-            }
-
-
-            if (string.IsNullOrWhiteSpace(request.Address))
-            {
-
-                return BadRequest("Адрес не может быть пустым");
-            }
-
-
-            if (string.IsNullOrWhiteSpace(request.Name))
-            {
-
-                return BadRequest("Название не может быть пустым");
-            }
-
-
-            if (string.IsNullOrWhiteSpace(request.TimeZone))
-            {
-
-                return BadRequest("Часовой пояс не может быть пустым");
-            }
-
-
-            LocationId locationId = LocationId.Create(Guid.NewGuid());
-            LocationAddress address = LocationAddress.Create(request.Address);
-            LocationName name = LocationName.Create(request.Name);
-            IanaTimeZone timeZone = IanaTimeZone.Create(request.TimeZone);
-            EntityLifeTime lifeTime = EntityLifeTime.Create(Date, Date);
-
-            Location location = new Location(locationId, address, name, timeZone, lifeTime);
-            LocationStorage.Add(location);
-            
-            return CreatedAtAction(nameof(GetById), new { id = locationId.Value }, location);
-        }
-        catch (ArgumentException ex)
-        {
-            return BadRequest($"Ошибка в формате данных: {ex.Message}");
-        }
-        catch (InvalidOperationException ex)
-        {
-            return Conflict($"Конфликт при добавлении: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            return Problem($"Внутренняя ошибка сервера: {ex.Message}");
-        }
+         var command = new CreateLocationCommand(request.Name, request.Address, request.TimeZone);
+         Guid result = await handler.Handle(command, ct);
+         return Ok(result);
+        
     }
 
     [HttpPatch("{id:guid}")]
@@ -130,15 +81,15 @@ public class LocationController : ControllerBase
             }
 
 
-            if (!string.IsNullOrWhiteSpace(request.Name))
+            if (!string.IsNullOrWhiteSpace(request.NewName))
             {
-                existingLocation.ChangeName(LocationName.Create(request.Name));
+                existingLocation.ChangeName(LocationName.Create(request.NewName));
             }
 
 
-            if (!string.IsNullOrWhiteSpace(request.Address))
+            if (!string.IsNullOrWhiteSpace(request.NewAddress))
             {
-                existingLocation.ChangeAddress(LocationAddress.Create(request.Address));
+                existingLocation.ChangeAddress(LocationAddress.Create(request.NewAddress));
             }
 
 
@@ -230,4 +181,43 @@ public class LocationController : ControllerBase
             return Problem($"Внутренняя ошибка сервера: {ex.Message}");
         }
     }
+
+     [HttpPut("{id:guid}")]
+    public async Task<IResult> Update(
+        [FromRoute] Guid id,
+        [FromBody] UpdateLocationRequest request,
+        [FromServices] UpdateLocationHandler handler,
+        CancellationToken ct)
+    {
+        try
+        {
+            var command = new UpdateLocationCommand
+            {
+                Id = id,
+                NewName = request.NewName,
+                NewAddress = request.NewAddress
+            };
+
+            var result = await handler.Handle(command, ct);
+            return Results.Ok(result);
+        }
+        catch (ArgumentException ex)
+        {
+            return Results.BadRequest(ex.Message);
+        }
+        catch (InvalidOperationException ex)
+        {
+            return Results.Conflict(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            return Results.Problem($"Внутренняя ошибка: {ex.Message}");
+        }
+    }
+    public record UpdateLocationRequest
+{
+    public string? NewName { get; set; }
+    public string? NewAddress { get; set; }
+    public string? TimeZone { get; set; }
+}
 }

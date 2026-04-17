@@ -68,4 +68,28 @@ namespace DirectoryService.Domain.LocationsContext
             LifeTime = EntityLifeTime.Create(LifeTime.CreatedAt, DateTime.UtcNow);
 	
  }
+ public void Update(LocationName? newName, LocationAddress? newAddress)
+{
+    if (!LifeTime.IsActive)
+            {
+                throw new InvalidOperationException("Нельзя изменить удаленную локацию");
+            }
+
+            if (newName == null && newAddress == null)
+            {
+                throw new ArgumentException("Нет данных для обновления");
+            }
+
+            if (newName != null)
+            {
+                Name = newName;
+            }
+
+            if (newAddress != null)
+            {
+                Address = newAddress;
+            }
+
+            LifeTime = LifeTime.Update();
+}
 }}
